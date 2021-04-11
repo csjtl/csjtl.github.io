@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Img/favicon-16x16.png">
+  <link rel="mask-icon" href="/Img/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/Img/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;tl8517.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
+<meta name="description" content="我的心跟着希望在动 我的未来是梦">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Focus">
+<meta property="og:url" content="https://tl8517.com/page/4/">
+<meta property="og:site_name" content="Focus">
+<meta property="og:description" content="我的心跟着希望在动 我的未来是梦">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="csjtl">
+<meta property="article:tag" content="OpenWRT, Hackintosh, Ubuntu, UbuntuServer, WordPress, Windows, RaspberryPI, car, misc">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://tl8517.com/page/4/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content="">
+<script data-pjax src="/js/load-config.js"></script>
+  <title>Focus</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161214207-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-161214207-1');
+      }
+    </script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Focus</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使燃</p>
+      <img class="custom-logo-image" src="/Img/Site-Avatar.png" alt="Focus">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">63</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="csjtl"
+      src="/Img/Sidebar-Avatar.gif">
+  <p class="site-author-name" itemprop="name">csjtl</p>
+  <div class="site-description" itemprop="description">我的心跟着希望在动 我的未来是梦</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">275</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/csjtl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;csjtl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tl8517@gmail.com" title="E-Mail → mailto:tl8517@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/tl8517" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;tl8517" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/tl8517" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;tl8517" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://tl8517.com/" title="https:&#x2F;&#x2F;tl8517.com">Title</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/cron/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/cron/" class="post-title-link" itemprop="url">cron 选择编辑器及开机启动配置（Ubuntu）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-09 21:22:23" itemprop="dateCreated datePublished" datetime="2020-04-09T21:22:23+08:00">2020-04-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 18:50:10" itemprop="dateModified" datetime="2021-04-11T18:50:10+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/" itemprop="url" rel="index"><span itemprop="name">system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>cron 选择编辑器及开机启动配置。cron用于设置周期性被执行的指令。文章内容为配置cron开机文件，首次使用选择编译器的问题。</p>
+<h5 id="开机启动配置："><a href="#开机启动配置：" class="headerlink" title="开机启动配置："></a>开机启动配置：</h5><p>安装cron：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pi<span class="variable">@raspberrypi</span><span class="symbol">:~</span> <span class="variable">$ </span>sudo apt install cron</span><br></pre></td></tr></table></figure>
+
+<p><img src="../assets/Cron/1.png" alt="cron"></p>
+<p>配置cron：
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cron/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/rpi-pcf8591/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rpi-pcf8591/" class="post-title-link" itemprop="url">PCF8591 AD-DA 转换模块 模块原理图，相关代码 树莓派3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-09 20:34:06" itemprop="dateCreated datePublished" datetime="2020-04-09T20:34:06+08:00">2020-04-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:48:34" itemprop="dateModified" datetime="2021-04-11T19:48:34+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/raspberry-pi/" itemprop="url" rel="index"><span itemprop="name">raspberry pi</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="PCF8591-AD-DA-转换模块，低功耗，8-bit-CMOS。具有4个模拟输入、1个模拟输出和1个串行I²C总线接口。内置跟踪保持、8-bit模数转换和8-bit数模转换，速率由I2C速率决定。文章内容包括：模块原理图，相关代码。"><a href="#PCF8591-AD-DA-转换模块，低功耗，8-bit-CMOS。具有4个模拟输入、1个模拟输出和1个串行I²C总线接口。内置跟踪保持、8-bit模数转换和8-bit数模转换，速率由I2C速率决定。文章内容包括：模块原理图，相关代码。" class="headerlink" title="PCF8591 AD-DA 转换模块，低功耗，8-bit CMOS。具有4个模拟输入、1个模拟输出和1个串行I²C总线接口。内置跟踪保持、8-bit模数转换和8-bit数模转换，速率由I2C速率决定。文章内容包括：模块原理图，相关代码。"></a><strong>PCF8591</strong> AD-DA 转换模块，低功耗，8-bit CMOS。具有4个模拟输入、1个模拟输出和1个串行I²C<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%80%BB%E7%BA%BF%E6%8E%A5%E5%8F%A3/10929901">总线接口</a>。内置跟踪保持、8-bit模数转换和8-bit数模转换，速率由I2C速率决定。文章内容包括：模块原理图，相关代码。</h3><h5 id="模拟输入：10-5，9-4，8-3，7-2-四组，AOUT为D-A-转换输出端。（原理图仅供参考）"><a href="#模拟输入：10-5，9-4，8-3，7-2-四组，AOUT为D-A-转换输出端。（原理图仅供参考）" class="headerlink" title="模拟输入：10-5，9-4，8-3，7-2 四组，AOUT为D/A 转换输出端。（原理图仅供参考）"></a>模拟输入：10-5，9-4，8-3，7-2 四组，AOUT为D/A 转换输出端。（原理图仅供参考）</h5><p><img src="../assets/RPi-PCF8591/1.png" alt="PCF8591 AD-DA"></p>
+<h6 id="引脚信息"><a href="#引脚信息" class="headerlink" title="引脚信息"></a>引脚信息
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/rpi-pcf8591/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/install-server-20-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/install-server-20-04/" class="post-title-link" itemprop="url">Install ubuntu server： Failed to set MoklistRT :  Out of resources</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-08 17:01:30" itemprop="dateCreated datePublished" datetime="2020-04-08T17:01:30+08:00">2020-04-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 18:54:30" itemprop="dateModified" datetime="2021-04-11T18:54:30+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/" itemprop="url" rel="index"><span itemprop="name">system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Install-server-20-04-，主板是拆机dell-optiplex-790的。使用UEFI启动时会报错，-Failed-to-set-MoklistRT-Out-of-resources，Could-not-create-MoklistRT-Out-of-resources-文章内容包括：错误的解决和安装过程。"><a href="#Install-server-20-04-，主板是拆机dell-optiplex-790的。使用UEFI启动时会报错，-Failed-to-set-MoklistRT-Out-of-resources，Could-not-create-MoklistRT-Out-of-resources-文章内容包括：错误的解决和安装过程。" class="headerlink" title="Install server 20.04 ，主板是拆机dell optiplex 790的。使用UEFI启动时会报错， Failed to set MoklistRT: Out of resources，Could not create MoklistRT : Out of resources.文章内容包括：错误的解决和安装过程。"></a>Install server 20.04 ，主板是拆机dell optiplex 790的。使用UEFI启动时会报错， Failed to set MoklistRT: Out of resources，Could not create MoklistRT : Out of resources.文章内容包括：错误的解决和安装过程。</h3><p>第一部分：报错的处理</p>
+<p><img src="../assets/Install-Server-20-04/01.png" alt="Failed to set MoklistRT: Out of resources"></p>
+<p>开机按F12 选择UEFI中的USB启动，报上图错误。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/install-server-20-04/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/usbdisk-ubuntu-macos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/usbdisk-ubuntu-macos/" class="post-title-link" itemprop="url">Create a bootable USB stick for Ubuntu on macOS</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-08 16:49:24" itemprop="dateCreated datePublished" datetime="2020-04-08T16:49:24+08:00">2020-04-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:34:26" itemprop="dateModified" datetime="2021-04-11T19:34:26+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/" itemprop="url" rel="index"><span itemprop="name">system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Create-a-bootable-USB-stick-for-Ubuntu-on-macOS-在mac电脑上制作ubuntu启动u盘。mac版本为10-15-4-19E266-，ubuntu为20-04-beta。文章内容为：制作过程，安装过程，问题处理。"><a href="#Create-a-bootable-USB-stick-for-Ubuntu-on-macOS-在mac电脑上制作ubuntu启动u盘。mac版本为10-15-4-19E266-，ubuntu为20-04-beta。文章内容为：制作过程，安装过程，问题处理。" class="headerlink" title="Create a bootable USB stick for Ubuntu on macOS 在mac电脑上制作ubuntu启动u盘。mac版本为10.15.4 (19E266)，ubuntu为20.04 beta。文章内容为：制作过程，安装过程，问题处理。"></a>Create a bootable USB stick for Ubuntu on macOS 在mac电脑上制作ubuntu启动u盘。mac版本为10.15.4 (19E266)，ubuntu为20.04 beta。文章内容为：制作过程，安装过程，问题处理。</h3><h5 id="第一部分：制作u盘（create-a-usb-stick）"><a href="#第一部分：制作u盘（create-a-usb-stick）" class="headerlink" title="第一部分：制作u盘（create a usb stick）"></a>第一部分：制作u盘（create a usb stick）</h5><p>在启动台找到磁盘工具-&gt;选择USB驱动器-&gt;抹掉，取个名字，格式为Mac os扩展日志式或ms-dos，方案：guid分区图。</p>
+<p><img src="../assets/USBDisk-Ubuntu-macOS/1.png" alt="USB Ubuntu macOS"></p>
+<p>完成关掉。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/usbdisk-ubuntu-macos/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/rpi-photo-interrupter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rpi-photo-interrupter/" class="post-title-link" itemprop="url">photo interrupter u型光电断路器 模块 树莓派3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-06 22:36:22" itemprop="dateCreated datePublished" datetime="2020-04-06T22:36:22+08:00">2020-04-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:48:38" itemprop="dateModified" datetime="2021-04-11T19:48:38+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/raspberry-pi/" itemprop="url" rel="index"><span itemprop="name">raspberry pi</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="photo-interrupter-u型光电断路器，有一个发射端和接收端组成，是一种对射式光电传感器。障碍物从两端之间穿过，遮挡光线，从而改变输出电平。广泛用于速度测试。文章内容包括模块原理图，模块接线图，相关代码。"><a href="#photo-interrupter-u型光电断路器，有一个发射端和接收端组成，是一种对射式光电传感器。障碍物从两端之间穿过，遮挡光线，从而改变输出电平。广泛用于速度测试。文章内容包括模块原理图，模块接线图，相关代码。" class="headerlink" title="photo interrupter u型光电断路器，有一个发射端和接收端组成，是一种对射式光电传感器。障碍物从两端之间穿过，遮挡光线，从而改变输出电平。广泛用于速度测试。文章内容包括模块原理图，模块接线图，相关代码。"></a>photo interrupter u型光电断路器，有一个发射端和接收端组成，是一种对射式光电传感器。障碍物从两端之间穿过，遮挡光线，从而改变输出电平。广泛用于速度测试。文章内容包括模块原理图，模块接线图，相关代码。</h3><p>原理图根据模块测量来的，这里有个疑问：接上vcc和gnd后led灯为什么会亮？？？？？？？？？？？？？</p>
+<p><img src="../assets/RPi-Photo-Interrupter/1.jpg" alt="photo interrupter"></p>
+<p>模块接线图：
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/rpi-photo-interrupter/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/openwrt-build-pi4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt-build-pi4/" class="post-title-link" itemprop="url">build openWRT 编译树莓派4的openwrt固件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-05 18:21:40" itemprop="dateCreated datePublished" datetime="2020-04-05T18:21:40+08:00">2020-04-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:47:12" itemprop="dateModified" datetime="2021-04-11T19:47:12+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/openwrt/" itemprop="url" rel="index"><span itemprop="name">openwrt</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="OpenWrt-是可用于嵌入式设备（无线路由器）的系统。OpenWrt具有路由器的全功能，同时也是易于修改的操作系统，它由更新的Linux内核提供支持。文章内容为-build-编译固件及安装，固件使用配置。"><a href="#OpenWrt-是可用于嵌入式设备（无线路由器）的系统。OpenWrt具有路由器的全功能，同时也是易于修改的操作系统，它由更新的Linux内核提供支持。文章内容为-build-编译固件及安装，固件使用配置。" class="headerlink" title="OpenWrt 是可用于嵌入式设备（无线路由器）的系统。OpenWrt具有路由器的全功能，同时也是易于修改的操作系统，它由更新的Linux内核提供支持。文章内容为 build 编译固件及安装，固件使用配置。"></a>OpenWrt 是可用于嵌入式设备（无线路由器）的系统。OpenWrt具有路由器的全功能，同时也是易于修改的操作系统，它由更新的Linux内核提供支持。文章内容为 build 编译固件及安装，固件使用配置。</h3><p><strong>软路由和硬路由的不同：</strong>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/openwrt-build-pi4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/install-ubuntu-20-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/install-ubuntu-20-04/" class="post-title-link" itemprop="url">install ubuntu 20.04 beta desktop桌面测试版20.04</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-04 23:34:49" itemprop="dateCreated datePublished" datetime="2020-04-04T23:34:49+08:00">2020-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 18:54:49" itemprop="dateModified" datetime="2021-04-11T18:54:49+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/" itemprop="url" rel="index"><span itemprop="name">system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/system/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="install-ubuntu-20-04-beta-desktop-for-vmware-虚拟机安装ubuntu-20-04-预测版。Ubuntu-20-04-LTS-桌面版，服务器版和云端产品的Beta版可供下载。Ubuntu-20-04-LTS正式版将于4月25日发布。内容包括：制作启动U盘，新建虚拟机，安装系统。"><a href="#install-ubuntu-20-04-beta-desktop-for-vmware-虚拟机安装ubuntu-20-04-预测版。Ubuntu-20-04-LTS-桌面版，服务器版和云端产品的Beta版可供下载。Ubuntu-20-04-LTS正式版将于4月25日发布。内容包括：制作启动U盘，新建虚拟机，安装系统。" class="headerlink" title="install ubuntu 20.04 beta desktop for vmware 虚拟机安装ubuntu 20.04 预测版。Ubuntu 20.04 LTS 桌面版，服务器版和云端产品的Beta版可供下载。Ubuntu 20.04 LTS正式版将于4月25日发布。内容包括：制作启动U盘，新建虚拟机，安装系统。"></a>install ubuntu 20.04 beta desktop for vmware 虚拟机安装ubuntu 20.04 预测版。Ubuntu 20.04 LTS 桌面版，服务器版和云端产品的Beta版可供下载。Ubuntu 20.04 LTS正式版将于4月25日发布。内容包括：制作启动U盘，新建虚拟机，安装系统。</h3><p>下载ubuntu 20.04 beta desktop</p>
+<p><a target="_blank" rel="noopener" href="http://releases.ubuntu.com/20.04/">ubuntu 20.04 beta desktop</a></p>
+<h5 id="第一部分：制作启动u盘"><a href="#第一部分：制作启动u盘" class="headerlink" title="第一部分：制作启动u盘"></a>第一部分：制作启动u盘</h5><p>我用这个Dell OS Recovery Tool。启动软件，点击确定。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/install-ubuntu-20-04/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/car-severe-jitter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/car-severe-jitter/" class="post-title-link" itemprop="url">MK4 1.8 加速无力 怠速抖动 严重 诊断（流程故障分析）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-04 17:42:49" itemprop="dateCreated datePublished" datetime="2020-04-04T17:42:49+08:00">2020-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 18:48:39" itemprop="dateModified" datetime="2021-04-11T18:48:39+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/car/" itemprop="url" rel="index"><span itemprop="name">car</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="MK4-1-8-加速无力-怠速抖动-严重。行驶中突然动力下降，加速缓慢无力，怠速低，油耗巨高。车型：MK4-1-8-5v-手动。里程：大约156800km"><a href="#MK4-1-8-加速无力-怠速抖动-严重。行驶中突然动力下降，加速缓慢无力，怠速低，油耗巨高。车型：MK4-1-8-5v-手动。里程：大约156800km" class="headerlink" title="MK4 1.8 加速无力 怠速抖动 严重。行驶中突然动力下降，加速缓慢无力，怠速低，油耗巨高。车型：MK4 1.8 5v 手动。里程：大约156800km"></a>MK4 1.8 加速无力 怠速抖动 严重。行驶中突然动力下降，加速缓慢无力，怠速低，油耗巨高。车型：MK4 1.8 5v 手动。里程：大约156800km</h3><p>过程：车在我手里有三年多的时间了，出现过三次行驶中突然动力丢失，差不多一年出现一次。前两次都是突然出现，马上就好了，没有相关故障代码。2019年1月13日左右，用车提示缺防冻液，这是故障接二连三出现的开始，直到1月29日下午才处理完。期间换了全车水管和金属接头，散热水箱，又发现刹车真空助力管开裂。天冷，启动又发现喷油嘴渗汽油，热车就好。换好喷油嘴油封，出去试车。前20多分钟非常正常，接着就出现了动力突然下降，踩油门提速慢，油耗巨高，怠速时只有500转，抖动严重，怠速油耗巨高。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/car-severe-jitter/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/rpi-reed-switch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rpi-reed-switch/" class="post-title-link" itemprop="url">reed switch 干簧管模块（簧片开关） 树莓派3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-04 12:57:37" itemprop="dateCreated datePublished" datetime="2020-04-04T12:57:37+08:00">2020-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:48:43" itemprop="dateModified" datetime="2021-04-11T19:48:43+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/raspberry-pi/" itemprop="url" rel="index"><span itemprop="name">raspberry pi</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="reed-switch-簧片开关，适用于检测磁场的传感器。在透明管内，有两个弹性的电镀簧片，填充惰性气体。两个簧片在没有强磁的环境下是分开的，当感应到强磁场时，两个簧片会连接在一起，从而导通相关电路。移除磁场，断开电路。文章内容包括模块原理图，设备接线图，相关代码。"><a href="#reed-switch-簧片开关，适用于检测磁场的传感器。在透明管内，有两个弹性的电镀簧片，填充惰性气体。两个簧片在没有强磁的环境下是分开的，当感应到强磁场时，两个簧片会连接在一起，从而导通相关电路。移除磁场，断开电路。文章内容包括模块原理图，设备接线图，相关代码。" class="headerlink" title="reed switch 簧片开关，适用于检测磁场的传感器。在透明管内，有两个弹性的电镀簧片，填充惰性气体。两个簧片在没有强磁的环境下是分开的，当感应到强磁场时，两个簧片会连接在一起，从而导通相关电路。移除磁场，断开电路。文章内容包括模块原理图，设备接线图，相关代码。"></a>reed switch 簧片开关，适用于检测磁场的传感器。在透明管内，有两个弹性的电镀簧片，填充惰性气体。两个簧片在没有强磁的环境下是分开的，当感应到强磁场时，两个簧片会连接在一起，从而导通相关电路。移除磁场，断开电路。文章内容包括模块原理图，设备接线图，相关代码。</h3><p>模块和前面的倾斜，震动模块一样，只是开关部分换成簧片开关。</p>
+<p><img src="../assets/RPi-Reed-Switch/1.jpg" alt="reed switch"></p>
+<p>模块接线也是一样的。用磁场控制变色灯。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/rpi-reed-switch/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/rpi-active-passive-buzzer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/rpi-active-passive-buzzer/" class="post-title-link" itemprop="url">active passive buzzer 有/无源蜂鸣器 树莓派3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-03 21:58:07" itemprop="dateCreated datePublished" datetime="2020-04-03T21:58:07+08:00">2020-04-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:48:11" itemprop="dateModified" datetime="2021-04-11T19:48:11+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/raspberry-pi/" itemprop="url" rel="index"><span itemprop="name">raspberry pi</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>蜂鸣器模块原理图</p>
+<h3 id="Active-vs-Passive-Buzzer-有源蜂鸣器内置振荡器，通电就会发出声音。无源蜂鸣器相反，直流电并不能让它发声。无源蜂鸣器，需要使用频率在2k到5k之间的方波来驱动。文章内容有模块原理图，树莓派3接线图，相关代码。"><a href="#Active-vs-Passive-Buzzer-有源蜂鸣器内置振荡器，通电就会发出声音。无源蜂鸣器相反，直流电并不能让它发声。无源蜂鸣器，需要使用频率在2k到5k之间的方波来驱动。文章内容有模块原理图，树莓派3接线图，相关代码。" class="headerlink" title="Active vs. Passive Buzzer 有源蜂鸣器内置振荡器，通电就会发出声音。无源蜂鸣器相反，直流电并不能让它发声。无源蜂鸣器，需要使用频率在2k到5k之间的方波来驱动。文章内容有模块原理图，树莓派3接线图，相关代码。"></a>Active vs. Passive Buzzer 有源蜂鸣器内置振荡器，通电就会发出声音。无源蜂鸣器相反，直流电并不能让它发声。无源蜂鸣器，需要使用频率在2k到5k之间的方波来驱动。文章内容有模块原理图，树莓派3接线图，相关代码。</h3><p><img src="../assets/RPi-Active-Passive-Buzzer/1.jpg"></p>
+<p>面包板接线图:有源蜂鸣器和无源蜂鸣器一样.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/rpi-active-passive-buzzer/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">csjtl</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="/js/cursor/explosion.min.js"></script>
+
+
+  
+  
+
+
+</body>
+</html>

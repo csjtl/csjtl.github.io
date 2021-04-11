@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Img/favicon-16x16.png">
+  <link rel="mask-icon" href="/Img/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/Img/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;tl8517.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:type" content="article">
+<meta property="og:title" content="推箱子(c代码)">
+<meta property="og:url" content="https://tl8517.com/c-code-pushbox/">
+<meta property="og:site_name" content="Focus">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-07T18:58:04.000Z">
+<meta property="article:modified_time" content="2021-04-11T11:45:52.297Z">
+<meta property="article:author" content="csjtl">
+<meta property="article:tag" content="c code">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://tl8517.com/c-code-pushbox/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content="">
+<script data-pjax src="/js/load-config.js"></script>
+  <title>推箱子(c代码) | Focus</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161214207-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-161214207-1');
+      }
+    </script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Focus</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">兴趣使燃</p>
+      <img class="custom-logo-image" src="/Img/Site-Avatar.png" alt="Focus">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">63</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="csjtl"
+      src="/Img/Sidebar-Avatar.gif">
+  <p class="site-author-name" itemprop="name">csjtl</p>
+  <div class="site-description" itemprop="description">我的心跟着希望在动 我的未来是梦</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">275</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/csjtl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;csjtl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tl8517@gmail.com" title="E-Mail → mailto:tl8517@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/tl8517" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;tl8517" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/tl8517" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;tl8517" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://tl8517.com/" title="https:&#x2F;&#x2F;tl8517.com">Title</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/c-code-pushbox/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          推箱子(c代码)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-03-08 02:58:04" itemprop="dateCreated datePublished" datetime="2020-03-08T02:58:04+08:00">2020-03-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 19:45:52" itemprop="dateModified" datetime="2021-04-11T19:45:52+08:00">2021-04-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/programming-language/cgame/" itemprop="url" rel="index"><span itemprop="name">cgame</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="keyword">int</span> boxs;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LONG 8                         <span class="comment">//图案大小</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> WIDTH 8</span></span><br><span class="line"><span class="keyword">int</span> map[WIDTH][LONG] = &#123;               <span class="comment">//打印图形结构&lt;!-- more --&gt;</span></span><br><span class="line">&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;,</span><br><span class="line">&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">boxNum</span><span class="params">()</span></span>&#123;                          <span class="comment">//盒子数量</span></span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line">boxs = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; LONG; i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; WIDTH; j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(map[i][j] == <span class="number">3</span>)&#123;</span><br><span class="line">boxs++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initData</span><span class="params">()</span></span>&#123;                       <span class="comment">//确定人的坐标</span></span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; LONG; i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; WIDTH; j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(map[i][j] == <span class="number">2</span>)&#123;</span><br><span class="line">x = i;</span><br><span class="line">y = j;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">drawMap</span><span class="params">()</span></span>&#123;                        <span class="comment">//打印图形</span></span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; LONG; i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; WIDTH; j++)&#123;</span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span>(map[i][j])&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;  &quot;</span>);      <span class="comment">//空</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;■ &quot;</span>);      <span class="comment">//墙</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;♀ &quot;</span>);      <span class="comment">//人</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;◆ &quot;</span>);      <span class="comment">//箱子</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;● &quot;</span>);      <span class="comment">//目标位置</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;★ &quot;</span>);      <span class="comment">//完成目标</span></span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">moveUp</span><span class="params">()</span></span>&#123;                         <span class="comment">//上移</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;up\n&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(map[x - <span class="number">1</span>][y] == <span class="number">0</span>)&#123;            <span class="comment">//前方为空</span></span><br><span class="line">map[x - <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x - <span class="number">1</span>][y] == <span class="number">3</span>)&#123;            <span class="comment">//前方为箱子</span></span><br><span class="line"><span class="keyword">if</span>(map[x - <span class="number">2</span>][y] == <span class="number">0</span>)&#123;        <span class="comment">//箱子前方为空</span></span><br><span class="line">map[x - <span class="number">2</span>][y] = <span class="number">3</span>;</span><br><span class="line">map[x - <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x - <span class="number">2</span>][y] == <span class="number">4</span>)&#123;        <span class="comment">//箱子前方为目标位置</span></span><br><span class="line">map[x - <span class="number">2</span>][y] = <span class="number">5</span>;</span><br><span class="line">map[x - <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">moveLeft</span><span class="params">()</span></span>&#123;                       <span class="comment">//左移</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;left\n&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(map[x][y - <span class="number">1</span>] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x][y - <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x][y - <span class="number">1</span>] == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(map[x][y - <span class="number">2</span>] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x][y - <span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">map[x][y - <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x][y - <span class="number">2</span>] == <span class="number">4</span>)&#123;</span><br><span class="line">map[x][y - <span class="number">2</span>] = <span class="number">5</span>;</span><br><span class="line">map[x][y - <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">moveDown</span><span class="params">()</span></span>&#123;                       <span class="comment">//下移</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;down\n&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(map[x + <span class="number">1</span>][y] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x + <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x + <span class="number">1</span>][y] == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(map[x + <span class="number">2</span>][y] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x + <span class="number">2</span>][y] = <span class="number">3</span>;</span><br><span class="line">map[x + <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x + <span class="number">2</span>][y] == <span class="number">4</span>)&#123;</span><br><span class="line">map[x + <span class="number">2</span>][y] = <span class="number">5</span>;</span><br><span class="line">map[x + <span class="number">1</span>][y] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">moveRight</span><span class="params">()</span></span>&#123;                      <span class="comment">//右移</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;ringht\n&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(map[x][y + <span class="number">1</span>] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x][y + <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x][y + <span class="number">1</span>] == <span class="number">3</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(map[x][y + <span class="number">2</span>] == <span class="number">0</span>)&#123;</span><br><span class="line">map[x][y + <span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">map[x][y + <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(map[x][y + <span class="number">2</span>] == <span class="number">4</span>)&#123;</span><br><span class="line">map[x][y + <span class="number">2</span>] = <span class="number">5</span>;</span><br><span class="line">map[x][y + <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">map[x][y] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span>*argv[])</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> direction;</span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line"><span class="built_in">system</span>(<span class="string">&quot;clear&quot;</span>);               <span class="comment">//清屏</span></span><br><span class="line"><span class="built_in">initData</span>();                    <span class="comment">//人的位置</span></span><br><span class="line"><span class="built_in">boxNum</span>();                      <span class="comment">//盒子的数量</span></span><br><span class="line"><span class="built_in">drawMap</span>();                     <span class="comment">//打印图</span></span><br><span class="line">direction = <span class="built_in">getchar</span>();         <span class="comment">//输入方向w,a,s,d</span></span><br><span class="line"><span class="built_in"><span class="keyword">switch</span></span>(direction)&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;w&#x27;</span>:</span><br><span class="line"><span class="built_in">moveUp</span>();</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line"><span class="built_in">moveLeft</span>();</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line"><span class="built_in">moveDown</span>();</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;d&#x27;</span>:</span><br><span class="line"><span class="built_in">moveRight</span>();</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(boxs == <span class="number">0</span>)&#123;                 <span class="comment">//没有盒子完成</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;game over\n&quot;</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>csjtl
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tl8517.com/c-code-pushbox/" title="推箱子(c代码)">https://tl8517.com/c-code-pushbox/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/c-code/" rel="tag"># c code</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/rpi-lcd1602a/" rel="next" title="LCD1602A 显示器 显示时钟和IP（显示所有连接） 树莓派3">
+                  LCD1602A 显示器 显示时钟和IP（显示所有连接） 树莓派3 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">csjtl</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="/js/cursor/explosion.min.js"></script>
+
+
+  
+  
+
+
+</body>
+</html>
