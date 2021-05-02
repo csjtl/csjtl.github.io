@@ -2474,92 +2474,8 @@
       </tags>
   </entry>
   <entry>
-    <title>404</title>
-    <url>//404.html</url>
-    <content><![CDATA[<p>  ██╗     ██╗  ██████╗   ██╗      ██╗   ███╗        ██╗ ██████╗    ████████╗<br>  ██║     ██║██╔═████╗██║      ██║   ████╗      ██║██╔═══██╗╚══██╔══╝<br>  ███████║██║██╔██║███████║    ██╔██╗  ██║██║        ██║        ██║<br>  ╚════██║████╔╝██║╚════██║    ██║╚██╗██║██║         ██║       ██║<br>               ██║╚██████╔╝             ██║    ██║ ╚████║╚██████╔╝         ██║<br>               ╚═╝ ╚═════╝                 ╚═╝    ╚═╝  ╚═══╝    ╚═════╝            ╚═╝</p>
-<p>​      ███████╗  ██████╗   ██╗        ██╗███╗        ██╗██████╗<br>​      ██╔════╝██╔═══██╗██║        ██║████╗     ██║██╔══██╗<br>​      █████╗     ██║        ██║██║        ██║██╔██╗  ██║██║      ██║<br>​      ██╔══╝     ██║        ██║██║        ██║██║╚██╗██║██║<br>​      ██║             ╚██████╔╝╚██████╔╝██║   ╚████║██████╔╝<br>​      ╚═╝                ╚═════╝  ╚═════╝     ╚═╝      ╚═══╝╚═════╝</p>
-  <p>The site configured at this address does not contain the requested file.</p>
-  <p>Make sure that the filename case matches the URL.For URLs (<code>http://example.com/Index/</code>).</p>
-
-  <p><strong>文件未找到</strong></p>
-  <p>在此地址配置的站点不包含请求的文件。</p>
-  <p>请确保文件名大小写与URL匹配。例如 (<code>http://example.com/Index/</code>).</p>
-
-<p>有需要可以使用站内搜索功能。</p>
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-       <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[<p>兴趣使燃</p>
-<p>这个地址你能找到吗?找到了请联系我…</p>
-<p>电影市悬疑省奇幻区爱情路恐怖小区4号楼2单元1988号</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>搭建个人网站Blog</title>
-    <url>/build-personal-website/index.html</url>
-    <content><![CDATA[<h2 id="搭建个人网站及博客"><a href="#搭建个人网站及博客" class="headerlink" title="搭建个人网站及博客"></a>搭建个人网站及博客</h2>]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>嵌入式系统</title>
-    <url>/embedded-system/index.html</url>
-    <content><![CDATA[<h2 id="嵌入式系统"><a href="#嵌入式系统" class="headerlink" title="嵌入式系统"></a>嵌入式系统</h2>]]></content>
-  </entry>
-  <entry>
-    <title>桌面操作系统</title>
-    <url>/system/index.html</url>
-    <content><![CDATA[<h2 id="桌面操作系统"><a href="#桌面操作系统" class="headerlink" title="桌面操作系统"></a>桌面操作系统</h2>]]></content>
-  </entry>
-  <entry>
-    <title>运动</title>
-    <url>/sporting/index.html</url>
-    <content><![CDATA[<h2 id="Sporting"><a href="#Sporting" class="headerlink" title="Sporting"></a>Sporting</h2>]]></content>
-  </entry>
-  <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Hexo</title>
-    <url>/build-personal-website/hexo/index.html</url>
-    <content><![CDATA[<h2 id="Hexo-Next"><a href="#Hexo-Next" class="headerlink" title="Hexo Next"></a>Hexo Next</h2>]]></content>
-  </entry>
-  <entry>
-    <title>Ubuntu服务器</title>
-    <url>/build-personal-website/ubuntu-server/index.html</url>
-    <content><![CDATA[<h2 id="Ubuntu-Server"><a href="#Ubuntu-Server" class="headerlink" title="Ubuntu Server"></a>Ubuntu Server</h2>]]></content>
-  </entry>
-  <entry>
-    <title>WordPress</title>
-    <url>/build-personal-website/wordpress/index.html</url>
-    <content><![CDATA[<h2 id="WordPress"><a href="#WordPress" class="headerlink" title="WordPress"></a>WordPress</h2>]]></content>
-  </entry>
-  <entry>
-    <title>OpenWRT</title>
-    <url>/embedded-system/openwrt/index.html</url>
-    <content><![CDATA[<h2 id="OpenWRT嵌入式系统"><a href="#OpenWRT嵌入式系统" class="headerlink" title="OpenWRT嵌入式系统"></a>OpenWRT嵌入式系统</h2>]]></content>
-  </entry>
-  <entry>
     <title>OK1046a-C2 FlexBuild 使用记录</title>
-    <url>/embedded-system/openwrt/ok1046a-c2-flexbuild.html</url>
+    <url>/ok1046a-c2-flexbuild/</url>
     <content><![CDATA[<h3 id="FlexBuild-使用"><a href="#FlexBuild-使用" class="headerlink" title="FlexBuild 使用"></a>FlexBuild 使用</h3><h4 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h4><table>
 <thead>
 <tr>
@@ -2958,6 +2874,98 @@
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">forlinx@ubuntu:/media/forlinx/a$ cat config.ini </span><br><span class="line">[config]</span><br><span class="line"><span class="attribute">platform</span>=ok1046-c</span><br><span class="line"><span class="attribute">qspifirmware</span>=firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line"><span class="attribute">sdfirmware</span>=firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line"><span class="attribute">rootfs</span>=ubuntu.img</span><br><span class="line"><span class="attribute">qspiflash</span>=<span class="literal">true</span></span><br><span class="line"><span class="attribute">emmcflash</span>=<span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>TF 卡启动开发板，停在uboot 命令行，此时弹出 TF 卡，系统自动将切换到 eMMC，输入 boot 进入烧写流程。（如果您 QSPI 能够正常引导系统，那么仅插入 U 盘启动系统即可，无需操作 TF 卡）</p>
 ]]></content>
+      <categories>
+        <category>embedded system</category>
+        <category>openwrt</category>
+      </categories>
+      <tags>
+        <tag>flexbuild</tag>
+        <tag>1046a</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>404</title>
+    <url>//404.html</url>
+    <content><![CDATA[<p>  ██╗     ██╗  ██████╗   ██╗      ██╗   ███╗        ██╗ ██████╗    ████████╗<br>  ██║     ██║██╔═████╗██║      ██║   ████╗      ██║██╔═══██╗╚══██╔══╝<br>  ███████║██║██╔██║███████║    ██╔██╗  ██║██║        ██║        ██║<br>  ╚════██║████╔╝██║╚════██║    ██║╚██╗██║██║         ██║       ██║<br>               ██║╚██████╔╝             ██║    ██║ ╚████║╚██████╔╝         ██║<br>               ╚═╝ ╚═════╝                 ╚═╝    ╚═╝  ╚═══╝    ╚═════╝            ╚═╝</p>
+<p>​      ███████╗  ██████╗   ██╗        ██╗███╗        ██╗██████╗<br>​      ██╔════╝██╔═══██╗██║        ██║████╗     ██║██╔══██╗<br>​      █████╗     ██║        ██║██║        ██║██╔██╗  ██║██║      ██║<br>​      ██╔══╝     ██║        ██║██║        ██║██║╚██╗██║██║<br>​      ██║             ╚██████╔╝╚██████╔╝██║   ╚████║██████╔╝<br>​      ╚═╝                ╚═════╝  ╚═════╝     ╚═╝      ╚═══╝╚═════╝</p>
+  <p>The site configured at this address does not contain the requested file.</p>
+  <p>Make sure that the filename case matches the URL.For URLs (<code>http://example.com/Index/</code>).</p>
+
+  <p><strong>文件未找到</strong></p>
+  <p>在此地址配置的站点不包含请求的文件。</p>
+  <p>请确保文件名大小写与URL匹配。例如 (<code>http://example.com/Index/</code>).</p>
+
+<p>有需要可以使用站内搜索功能。</p>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+       <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[<p>兴趣使燃</p>
+<p>这个地址你能找到吗?找到了请联系我…</p>
+<p>电影市悬疑省奇幻区爱情路恐怖小区4号楼2单元1988号</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>搭建个人网站Blog</title>
+    <url>/build-personal-website/index.html</url>
+    <content><![CDATA[<h2 id="搭建个人网站及博客"><a href="#搭建个人网站及博客" class="headerlink" title="搭建个人网站及博客"></a>搭建个人网站及博客</h2>]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>嵌入式系统</title>
+    <url>/embedded-system/index.html</url>
+    <content><![CDATA[<h2 id="嵌入式系统"><a href="#嵌入式系统" class="headerlink" title="嵌入式系统"></a>嵌入式系统</h2>]]></content>
+  </entry>
+  <entry>
+    <title>桌面操作系统</title>
+    <url>/system/index.html</url>
+    <content><![CDATA[<h2 id="桌面操作系统"><a href="#桌面操作系统" class="headerlink" title="桌面操作系统"></a>桌面操作系统</h2>]]></content>
+  </entry>
+  <entry>
+    <title>运动</title>
+    <url>/sporting/index.html</url>
+    <content><![CDATA[<h2 id="Sporting"><a href="#Sporting" class="headerlink" title="Sporting"></a>Sporting</h2>]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hexo</title>
+    <url>/build-personal-website/hexo/index.html</url>
+    <content><![CDATA[<h2 id="Hexo-Next"><a href="#Hexo-Next" class="headerlink" title="Hexo Next"></a>Hexo Next</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Ubuntu服务器</title>
+    <url>/build-personal-website/ubuntu-server/index.html</url>
+    <content><![CDATA[<h2 id="Ubuntu-Server"><a href="#Ubuntu-Server" class="headerlink" title="Ubuntu Server"></a>Ubuntu Server</h2>]]></content>
+  </entry>
+  <entry>
+    <title>WordPress</title>
+    <url>/build-personal-website/wordpress/index.html</url>
+    <content><![CDATA[<h2 id="WordPress"><a href="#WordPress" class="headerlink" title="WordPress"></a>WordPress</h2>]]></content>
+  </entry>
+  <entry>
+    <title>OpenWRT</title>
+    <url>/embedded-system/openwrt/index.html</url>
+    <content><![CDATA[<h2 id="OpenWRT嵌入式系统"><a href="#OpenWRT嵌入式系统" class="headerlink" title="OpenWRT嵌入式系统"></a>OpenWRT嵌入式系统</h2>]]></content>
   </entry>
   <entry>
     <title>Raspberry Pi</title>

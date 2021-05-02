@@ -23,29 +23,28 @@
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;tl8517.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/assets&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
 <meta name="description" content="FlexBuild 使用编译环境搭建    命令 路径    执行下列命令的路径  orlinx@ubuntu:~$   使用 root 用户操作 sudo -s    执行下列命令的路径  root@ubuntu:~$   创建work目录 mdkir -p &#x2F;home&#x2F;forlinx&#x2F;work    解压到work目录 tar xvf OK10xx-linux-fs.tar.bz2 -C &#x2F;h">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="OK1046a-C2 FlexBuild 使用记录">
-<meta property="og:url" content="https://tl8517.com/embedded-system/openwrt/ok1046a-c2-flexbuild">
+<meta property="og:url" content="https://tl8517.com/ok1046a-c2-flexbuild/">
 <meta property="og:site_name" content="Focus">
 <meta property="og:description" content="FlexBuild 使用编译环境搭建    命令 路径    执行下列命令的路径  orlinx@ubuntu:~$   使用 root 用户操作 sudo -s    执行下列命令的路径  root@ubuntu:~$   创建work目录 mdkir -p &#x2F;home&#x2F;forlinx&#x2F;work    解压到work目录 tar xvf OK10xx-linux-fs.tar.bz2 -C &#x2F;h">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-02T08:42:11.087Z">
-<meta property="article:modified_time" content="2021-05-02T08:42:11.087Z">
+<meta property="article:published_time" content="2021-05-02T07:21:23.953Z">
+<meta property="article:modified_time" content="2021-05-02T09:50:49.544Z">
 <meta property="article:author" content="csjtl">
 <meta property="article:tag" content="flexbuild">
 <meta property="article:tag" content="1046a">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://tl8517.com/embedded-system/openwrt/ok1046a-c2-flexbuild">
+<link rel="canonical" href="https://tl8517.com/ok1046a-c2-flexbuild/">
 
 
 
-<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
 <meta name="hexo-config-calendar" content="">
 <script data-pjax src="/js/load-config.js"></script>
-  <title>OK1046a-C2 FlexBuild 使用记录 | Focus
-</title>
+  <title>OK1046a-C2 FlexBuild 使用记录 | Focus</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161214207-1"></script>
     <script>
@@ -102,30 +101,6 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        
-            
-  <li class="menu-item menu-item-build-personal-website"><a href="/build-personal-website/" rel="section"><i class="fas fa-blog fa-fw"></i>搭建网站Blog</a></li>
-
-
-      
-        
-            
-  <li class="menu-item menu-item-system"><a href="/system/" rel="section"><i class="fas fa-desktop fa-fw"></i>桌面操作系统</a></li>
-
-
-      
-        
-            
-  <li class="menu-item menu-item-sporting"><a href="/sporting/" rel="section"><i class="fas fa-running fa-fw"></i>运动</a></li>
-
-
-      
-        
-            
-  <li class="menu-item menu-item-embedded-system"><a href="/embedded-system/" rel="section"><i class="fas fa-microchip fa-fw"></i>嵌入式系统</a></li>
-
-
-      
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">14</span></a></li>
       <li class="menu-item menu-item-search">
@@ -199,7 +174,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +186,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">275</span>
+        <span class="site-state-item-count">277</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -266,106 +241,69 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
-  
-
-      
-      
-
-      
-      
-
-      
-      
-
-      
-
-        
-        <ul class="sub-menu menu">
-          
-            
-          
-          
-            
-                
-  <li class="menu-item menu-item-openwrt"><a href="/embedded-system/openwrt/" rel="section"><i class="fa fa-flag fa-fw"></i>OpenWRT</a></li>
+    <div class="main-inner post posts-expand">
 
 
-          
-            
-                
-  <li class="menu-item menu-item-raspberry-pi"><a href="/embedded-system/raspberry-pi/" rel="section"><i class="fab fa-raspberry-pi fa-fw"></i>Raspberry Pi</a></li>
-
-
-        </ul>
-        
-
-        
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-                
-
-                
-
-                    
-                    <ul class="sub-menu menu">
-                      
-                        
-  <li class="menu-item menu-item-ok1046a-c2-flexbuild"><a href="/embedded-system/openwrt/ok1046a-c2-flexbuild/" rel="section">OK1046a-C2 FlexBuild</a></li>
-
-
-                    </ul>
-                    
-                
-
-                
-                
-        
-      
   
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+<div class="post-block">
+  
+  
 
-<h1 class="post-title" itemprop="name headline">OK1046a-C2 FlexBuild 使用记录
-</h1>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/ok1046a-c2-flexbuild/">
 
-<div class="post-meta-container">
-  <ul class="breadcrumb">
-            <li><a href="/embedded-system/">EMBEDDED-SYSTEM</a></li>
-            <li><a href="/embedded-system/openwrt/">OPENWRT</a></li>
-            <li>OK1046A-C2-FLEXBUILD</li>
-          
-  </ul>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+      <meta itemprop="description" content="我的心跟着希望在动 我的未来是梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OK1046a-C2 FlexBuild 使用记录
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-05-02 15:21:23 / 修改时间：17:50:49" itemprop="dateCreated datePublished" datetime="2021-05-02T15:21:23+08:00">2021-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/openwrt/" itemprop="url" rel="index"><span itemprop="name">openwrt</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <h3 id="FlexBuild-使用"><a href="#FlexBuild-使用" class="headerlink" title="FlexBuild 使用"></a>FlexBuild 使用</h3><h4 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h4><table>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="FlexBuild-使用"><a href="#FlexBuild-使用" class="headerlink" title="FlexBuild 使用"></a>FlexBuild 使用</h3><h4 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h4><table>
 <thead>
 <tr>
 <th align="center"></th>
@@ -763,20 +701,53 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">forlinx@ubuntu:/media/forlinx/a$ cat config.ini </span><br><span class="line">[config]</span><br><span class="line"><span class="attribute">platform</span>=ok1046-c</span><br><span class="line"><span class="attribute">qspifirmware</span>=firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line"><span class="attribute">sdfirmware</span>=firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line"><span class="attribute">rootfs</span>=ubuntu.img</span><br><span class="line"><span class="attribute">qspiflash</span>=<span class="literal">true</span></span><br><span class="line"><span class="attribute">emmcflash</span>=<span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>TF 卡启动开发板，停在uboot 命令行，此时弹出 TF 卡，系统自动将切换到 eMMC，输入 boot 进入烧写流程。（如果您 QSPI 能够正常引导系统，那么仅插入 U 盘启动系统即可，无需操作 TF 卡）</p>
 
-      </div>
-      
-      
-      
     </div>
-  <ul class="breadcrumb">
-            <li><a href="/embedded-system/">EMBEDDED-SYSTEM</a></li>
-            <li><a href="/embedded-system/openwrt/">OPENWRT</a></li>
-            <li>OK1046A-C2-FLEXBUILD</li>
-          
-  </ul>
 
     
     
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>csjtl
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tl8517.com/ok1046a-c2-flexbuild/" title="OK1046a-C2 FlexBuild 使用记录">https://tl8517.com/ok1046a-c2-flexbuild/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/flexbuild/" rel="tag"># flexbuild</a>
+              <a href="/tags/1046a/" rel="tag"># 1046a</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/opencore-usb-typec/" rel="prev" title="微星MSI B360M MORTAR TITANIUM定制USB后typec不识别的问题（opencore0.6.3）">
+                  <i class="fa fa-chevron-left"></i> 微星MSI B360M MORTAR TITANIUM定制USB后typec不识别的问题（opencore0.6.3）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 <script src="/js/comments.js"></script>
 </div>

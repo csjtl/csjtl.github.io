@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tl8517.com/embedded-system/openwrt/ok1046a-c2-flexbuild</loc>
+    <loc>https://tl8517.com/ok1046a-c2-flexbuild/</loc>
     
     <lastmod>2021-05-02</lastmod>
     
@@ -2490,6 +2490,20 @@
   
   <url>
     <loc>https://tl8517.com/tags/%E9%99%90%E5%88%B6/</loc>
+    <lastmod>2021-05-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tl8517.com/tags/flexbuild/</loc>
+    <lastmod>2021-05-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tl8517.com/tags/1046a/</loc>
     <lastmod>2021-05-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
