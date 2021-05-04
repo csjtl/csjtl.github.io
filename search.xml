@@ -2623,13 +2623,16 @@
 <td align="left"><code>build/firmware/u-boot/ls1046ardb/uboot_ls1046ardb_sdcard_1133_5a59.bin</code></td>
 </tr>
 <tr>
-<td align="center">生成镜像</td>
+<td align="center">生成镜像qspi</td>
 <td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b qspi -S 1133</code></td>
 <td align="left"><code>build/images/firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</code></td>
 </tr>
+<tr>
+<td align="center">生成镜像sd</td>
+<td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b sd -S 1133</code></td>
+<td align="left"><code>build/images/firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</code></td>
+</tr>
 </tbody></table>
-<pre><code>       |  `flex-builder -i mkfw -a arm64 -m ls1046ardb -b sd -S 1133`       |  `build/images/firmware_ls1046ardb_uboot_sdboot_1133_5a59.img`
-</code></pre>
 <h4 id="单独编译内核及模块"><a href="#单独编译内核及模块" class="headerlink" title="单独编译内核及模块"></a>单独编译内核及模块</h4><table>
 <thead>
 <tr>
