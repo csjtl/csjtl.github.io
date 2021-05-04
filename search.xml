@@ -2490,6 +2490,11 @@
 <td align="left"><code>orlinx@ubuntu:~$</code></td>
 </tr>
 <tr>
+<td align="center">创建work目录</td>
+<td align="left"><code>mkdir -p /home/forlinx/work</code></td>
+<td align="left"></td>
+</tr>
+<tr>
 <td align="center">使用 root 用户操作</td>
 <td align="left"><code>sudo -s</code></td>
 <td align="left"></td>
@@ -2498,11 +2503,6 @@
 <td align="center">执行下列命令的路径</td>
 <td align="left"></td>
 <td align="left"><code>root@ubuntu:~$</code></td>
-</tr>
-<tr>
-<td align="center">创建work目录</td>
-<td align="left"><code>mkdir -p /home/forlinx/work</code></td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="center">解压到work目录</td>
@@ -2564,7 +2564,7 @@
 </tr>
 <tr>
 <td align="center">全部编译</td>
-<td align="left"><code>flex-builder -i merge-component -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>flex-builder -a arm64 -m ls1046ardb</code></td>
 <td align="left"><code>build/images</code></td>
 </tr>
 <tr>
