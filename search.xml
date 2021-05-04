@@ -2501,7 +2501,7 @@
 </tr>
 <tr>
 <td align="center">创建work目录</td>
-<td align="left"><code>mdkir -p /home/forlinx/work</code></td>
+<td align="left"><code>mkdir -p /home/forlinx/work</code></td>
 <td align="left"></td>
 </tr>
 <tr>
