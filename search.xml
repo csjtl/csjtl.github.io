@@ -2890,6 +2890,16 @@
       </tags>
   </entry>
   <entry>
+    <title>关闭 Adobe Acrobat Reader DC 右侧工具栏</title>
+    <url>/adobe-sidebar/</url>
+    <content><![CDATA[<p><strong>跳到此路径 <code>C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroApp\CHS</code> 打开Viewer.aapp文件。</strong><br>删除如下代码(需要管理员权限操作)：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Layout</span> <span class="attr">name</span>=<span class="string">&quot;Default&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">RHP</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Component</span> <span class="attr">name</span>=<span class="string">&quot;AppShortcutListView&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Custom&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">RHP</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>adobe</tag>
+        <tag>sidebar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>404</title>
     <url>//404.html</url>
     <content><![CDATA[<p>  ██╗     ██╗  ██████╗   ██╗      ██╗   ███╗        ██╗ ██████╗    ████████╗<br>  ██║     ██║██╔═████╗██║      ██║   ████╗      ██║██╔═══██╗╚══██╔══╝<br>  ███████║██║██╔██║███████║    ██╔██╗  ██║██║        ██║        ██║<br>  ╚════██║████╔╝██║╚════██║    ██║╚██╗██║██║         ██║       ██║<br>               ██║╚██████╔╝             ██║    ██║ ╚████║╚██████╔╝         ██║<br>               ╚═╝ ╚═════╝                 ╚═╝    ╚═╝  ╚═══╝    ╚═════╝            ╚═╝</p>
