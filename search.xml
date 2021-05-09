@@ -1946,7 +1946,7 @@
 <h4 id="vim"><a href="#vim" class="headerlink" title="vim:"></a>vim:</h4><p>全选复制粘贴</p>
 <figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">ggvG</span><br><span class="line">ggyG</span><br><span class="line"><span class="string">&quot;+p</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3、nmcli"><a href="#3、nmcli" class="headerlink" title="3、nmcli"></a><code>3、nmcli</code></h2><p>这是 Linux 上可以管理网络的另一个工具。这是一个功能强大而且实用的工具。很多系统管理员都喜欢使用该工具，因为它非常容易使用。</p>
+<h4 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h4><p>这是 Linux 上可以管理网络的另一个工具。这是一个功能强大而且实用的工具。很多系统管理员都喜欢使用该工具，因为它非常容易使用。</p>
 <p>这种方法有两个操作步骤：关闭网络，再开启网络。</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">sudo nmcli networking off</span><br></pre></td></tr></table></figure>
 
@@ -1954,6 +1954,7 @@
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">sudo nmcli networking on</span><br></pre></td></tr></table></figure>
 
 <p>你可以通过 man 帮助文档了解 nmcli 的更多用法。</p>
+<h4 id="gparted-磁盘管理工具"><a href="#gparted-磁盘管理工具" class="headerlink" title="gparted 磁盘管理工具"></a>gparted 磁盘管理工具</h4><p>sudo apt-get install gparted</p>
 ]]></content>
       <categories>
         <category>system</category>
@@ -2898,6 +2899,14 @@
         <tag>adobe</tag>
         <tag>sidebar</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>OpenWrt of OK1046A-C2 的内核，设备树，文件系统的路径</title>
+    <url>/openwrt-ok1046ardb/</url>
+    <content><![CDATA[<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p><code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/root-layerscape</code></p>
+<h4 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/Image</code></p>
+<h4 id="设备树"><a href="#设备树" class="headerlink" title="设备树"></a>设备树</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/dts/freescale/</code></p>
+]]></content>
   </entry>
   <entry>
     <title>404</title>
