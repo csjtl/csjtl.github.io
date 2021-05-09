@@ -1902,30 +1902,22 @@
 
 <h4 id="查看所有用户和用户组："><a href="#查看所有用户和用户组：" class="headerlink" title="查看所有用户和用户组："></a>查看所有用户和用户组：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>cat /etc/passwd</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>cat /etc/group</span><br></pre></td></tr></table></figure>
 
-<h4 id="将用户csjtl添加到www-data："><a href="#将用户csjtl添加到www-data：" class="headerlink" title="将用户csjtl添加到www-data："></a>将用户csjtl添加到www-data：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo usermod -a -G www-data csjtl</span><br></pre></td></tr></table></figure>
-
-<h4 id="文件夹的用户权限"><a href="#文件夹的用户权限" class="headerlink" title="文件夹的用户权限:"></a>文件夹的用户权限:</h4><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">csjtl@ubuntu:~$ sudo chown -R www-data:www-data <span class="regexp">/usr/</span>share<span class="regexp">/wordpress/</span>wp-content<span class="regexp">/themes/my</span>note<span class="regexp">/js/</span></span><br></pre></td></tr></table></figure>
-
+<h4 id="将用户csjtl添加到www-data："><a href="#将用户csjtl添加到www-data：" class="headerlink" title="将用户csjtl添加到www-data："></a>将用户csjtl添加到www-data：</h4><p><code>csjtl@ubuntu:~$ sudo usermod -a -G www-data csjtl</code></p>
+<h4 id="文件夹的用户权限"><a href="#文件夹的用户权限" class="headerlink" title="文件夹的用户权限:"></a>文件夹的用户权限:</h4><p><code>csjtl@ubuntu:~$ sudo chown -R www-data:www-data /usr/share/wordpress/wp-content/themes/mynote/js/</code></p>
 <h4 id="dpkg安装-软件依赖-以及卸载"><a href="#dpkg安装-软件依赖-以及卸载" class="headerlink" title="dpkg安装(软件依赖)以及卸载"></a>dpkg安装(软件依赖)以及卸载</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~/Downloads</span><span class="variable">$ </span>sudo dpkg -i imager_amd64.deb</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~/Downloads</span><span class="variable">$ </span>sudo apt install -f</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~/Downloads</span><span class="variable">$ </span>sudo dpkg -r xxxxx</span><br></pre></td></tr></table></figure>
 
 <h4 id="挂载usb"><a href="#挂载usb" class="headerlink" title="挂载usb"></a>挂载usb</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>mount /dev/sdb</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>umount /mnt/usb</span><br></pre></td></tr></table></figure>
 
-<h4 id="apache2状态"><a href="#apache2状态" class="headerlink" title="apache2状态"></a>apache2状态</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo systemctl status apache2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ps</span> <span class="literal">-efgrep</span> apache2</span><br><span class="line"><span class="built_in">ps</span> <span class="literal">-efgrep</span> ssh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="apache2状态"><a href="#apache2状态" class="headerlink" title="apache2状态"></a>apache2状态</h4><p><code>csjtl@ubuntu:~$ sudo systemctl status apache2</code></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ps</span> <span class="literal">-efgrep</span> apache2</span><br><span class="line"><span class="built_in">ps</span> <span class="literal">-efgrep</span> ssh</span><br></pre></td></tr></table></figure>
 
 <h4 id="Php-ini-文件位置在哪里，怎么找到-php-ini"><a href="#Php-ini-文件位置在哪里，怎么找到-php-ini" class="headerlink" title="Php.ini 文件位置在哪里，怎么找到 php.ini"></a>Php.ini 文件位置在哪里，怎么找到 php.ini</h4><p>在你自己的网站目录里，新建一个.php文件，写入如下代码</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> phpinfo(); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p><code>&lt;?php echo phpinfo(); ?&gt;</code></p>
 <p>保存，浏览器访问即可</p>
-<h4 id="network网卡信息："><a href="#network网卡信息：" class="headerlink" title="network网卡信息："></a>network网卡信息：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>lshw -C network</span><br></pre></td></tr></table></figure>
-
-<h4 id="pcie设备和pcie桥的详细信息："><a href="#pcie设备和pcie桥的详细信息：" class="headerlink" title="pcie设备和pcie桥的详细信息："></a>pcie设备和pcie桥的详细信息：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo lspci -vvv</span><br></pre></td></tr></table></figure>
-
-<h4 id="蓝牙设备调试，扫描低功耗设备："><a href="#蓝牙设备调试，扫描低功耗设备：" class="headerlink" title="蓝牙设备调试，扫描低功耗设备："></a>蓝牙设备调试，扫描低功耗设备：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>hcitool dev</span><br></pre></td></tr></table></figure>
-
-<h4 id="无线蓝牙状态："><a href="#无线蓝牙状态：" class="headerlink" title="无线蓝牙状态："></a>无线蓝牙状态：</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>rfkill list</span><br></pre></td></tr></table></figure>
-
+<h4 id="network网卡信息："><a href="#network网卡信息：" class="headerlink" title="network网卡信息："></a>network网卡信息：</h4><p><code>csjtl@ubuntu:~$ lshw -C network</code></p>
+<h4 id="pcie设备和pcie桥的详细信息："><a href="#pcie设备和pcie桥的详细信息：" class="headerlink" title="pcie设备和pcie桥的详细信息："></a>pcie设备和pcie桥的详细信息：</h4><p><code>csjtl@ubuntu:~$ sudo lspci -vvv</code></p>
+<h4 id="蓝牙设备调试，扫描低功耗设备："><a href="#蓝牙设备调试，扫描低功耗设备：" class="headerlink" title="蓝牙设备调试，扫描低功耗设备："></a>蓝牙设备调试，扫描低功耗设备：</h4><p><code>csjtl@ubuntu:~$ hcitool dev</code></p>
+<h4 id="无线蓝牙状态："><a href="#无线蓝牙状态：" class="headerlink" title="无线蓝牙状态："></a>无线蓝牙状态：</h4><p><code>csjtl@ubuntu:~$ rfkill list</code></p>
 <h4 id="网口监测"><a href="#网口监测" class="headerlink" title="网口监测:"></a>网口监测:</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo apt install nethogs</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo nethogs -v <span class="number">3</span></span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo apt install net-tools</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>ifconfig</span><br></pre></td></tr></table></figure>
 
 <h4 id="传感器状态"><a href="#传感器状态" class="headerlink" title="传感器状态:"></a>传感器状态:</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo apt install lm-sensors sensors-applet</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo sensors-detect</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sensors</span><br></pre></td></tr></table></figure>
@@ -1937,24 +1929,15 @@
 <h4 id="笔记本中取消盒盖休眠"><a href="#笔记本中取消盒盖休眠" class="headerlink" title="笔记本中取消盒盖休眠"></a><strong>笔记本中取消盒盖休眠</strong></h4><p><strong>在终端中编辑 logind.conf</strong></p>
 <figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo vi /etc/systemd/logind.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#HandleLidSwitch=suspend</span></span><br><span class="line"><span class="comment">#修改后如下</span></span><br><span class="line">HandleLidSwitch=ignore</span><br><span class="line"></span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo reboot</span><br></pre></td></tr></table></figure>
 
-<h4 id="添加Ubuntu用户"><a href="#添加Ubuntu用户" class="headerlink" title="添加Ubuntu用户:"></a>添加Ubuntu用户:</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo adduser tl</span><br></pre></td></tr></table></figure>
-
-<h4 id="切换Ubuntu用户"><a href="#切换Ubuntu用户" class="headerlink" title="切换Ubuntu用户:"></a>切换Ubuntu用户:</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>su tl</span><br></pre></td></tr></table></figure>
-
-<h4 id="Ubuntu修改root密码"><a href="#Ubuntu修改root密码" class="headerlink" title="Ubuntu修改root密码:"></a>Ubuntu修改root密码:</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>sudo passwd</span><br></pre></td></tr></table></figure>
-
+<h4 id="添加Ubuntu用户"><a href="#添加Ubuntu用户" class="headerlink" title="添加Ubuntu用户:"></a>添加Ubuntu用户:</h4><p><code>csjtl@ubuntu:~$ sudo adduser tl</code></p>
+<h4 id="切换Ubuntu用户"><a href="#切换Ubuntu用户" class="headerlink" title="切换Ubuntu用户:"></a>切换Ubuntu用户:</h4><p><code>csjtl@ubuntu:~$ su tl</code></p>
+<h4 id="Ubuntu修改root密码"><a href="#Ubuntu修改root密码" class="headerlink" title="Ubuntu修改root密码:"></a>Ubuntu修改root密码:</h4><p><code>csjtl@ubuntu:~$ sudo passwd</code></p>
 <h4 id="vim"><a href="#vim" class="headerlink" title="vim:"></a>vim:</h4><p>全选复制粘贴</p>
 <figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">ggvG</span><br><span class="line">ggyG</span><br><span class="line"><span class="string">&quot;+p</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h4><p>这是 Linux 上可以管理网络的另一个工具。这是一个功能强大而且实用的工具。很多系统管理员都喜欢使用该工具，因为它非常容易使用。</p>
-<p>这种方法有两个操作步骤：关闭网络，再开启网络。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">sudo nmcli networking off</span><br></pre></td></tr></table></figure>
-
-<p>这样就会关闭网络，网络图标会消失。接下来，再开启网络：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">sudo nmcli networking on</span><br></pre></td></tr></table></figure>
-
-<p>你可以通过 man 帮助文档了解 nmcli 的更多用法。</p>
-<h4 id="gparted-磁盘管理工具"><a href="#gparted-磁盘管理工具" class="headerlink" title="gparted 磁盘管理工具"></a>gparted 磁盘管理工具</h4><p>sudo apt-get install gparted</p>
+<h4 id="nmcli"><a href="#nmcli" class="headerlink" title="nmcli"></a>nmcli</h4><p>关闭网络:<br><code>sudo nmcli networking off</code><br>再开启网络：<br><code>sudo nmcli networking on</code><br>通过 man 帮助文档了解 nmcli 的更多用法。</p>
+<h4 id="gparted-磁盘管理工具"><a href="#gparted-磁盘管理工具" class="headerlink" title="gparted 磁盘管理工具"></a>gparted 磁盘管理工具</h4><p><code>sudo apt-get install gparted</code></p>
+<h4 id="查找文件中的关键字"><a href="#查找文件中的关键字" class="headerlink" title="查找文件中的关键字"></a>查找文件中的关键字</h4><p><code>grep -rn &quot;ls1046ardb&quot;</code></p>
 ]]></content>
       <categories>
         <category>system</category>
@@ -2904,8 +2887,10 @@
     <title>OpenWrt of OK1046A-C2 的内核，设备树，文件系统的路径</title>
     <url>/openwrt-ok1046ardb/</url>
     <content><![CDATA[<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p><code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/root-layerscape</code></p>
+<p>文件系统 IMG 文件：<br>在目录 <code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/</code> 中执行：<br><code>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</code></p>
 <h4 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/Image</code></p>
 <h4 id="设备树"><a href="#设备树" class="headerlink" title="设备树"></a>设备树</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/dts/freescale/</code></p>
+<p>制作镜像<br>cd /home/forlinx/work/openwrt/staging_dir/target-aarch64_generic_musl<br>rm root-layerscape/lib/preinit/80_mount_root<br>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</p>
 ]]></content>
   </entry>
   <entry>
