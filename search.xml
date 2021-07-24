@@ -77,6 +77,16 @@
       </tags>
   </entry>
   <entry>
+    <title>关闭 Adobe Acrobat Reader DC 右侧工具栏</title>
+    <url>/adobe-sidebar/</url>
+    <content><![CDATA[<p><strong>跳到此路径 <code>C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroApp\CHS</code> 打开Viewer.aapp文件。</strong><br>删除如下代码(需要管理员权限操作)：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Layout</span> <span class="attr">name</span>=<span class="string">&quot;Default&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">RHP</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Component</span> <span class="attr">name</span>=<span class="string">&quot;AppShortcutListView&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Custom&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">RHP</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>adobe</tag>
+        <tag>sidebar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>官方bing壁纸软件-Bing Wallpaper</title>
     <url>/bing-wallpaper/</url>
     <content><![CDATA[<h2 id="更新内容：官方Bing壁纸软件-Bing-Wallpaper"><a href="#更新内容：官方Bing壁纸软件-Bing-Wallpaper" class="headerlink" title="更新内容：官方Bing壁纸软件-Bing Wallpaper"></a>更新内容：官方Bing壁纸软件-<a href="https://www.microsoft.com/en-us/bing/bing-Wallpaper?rtc=1#primaryR2">Bing Wallpaper</a></h2><h4 id="官方发布了一款bing壁纸软件：Bing-Wallpaper"><a href="#官方发布了一款bing壁纸软件：Bing-Wallpaper" class="headerlink" title="官方发布了一款bing壁纸软件：Bing Wallpaper"></a>官方发布了一款bing壁纸软件：<a href="https://www.microsoft.com/en-us/bing/bing-Wallpaper?rtc=1#primaryR2">Bing Wallpaper</a></h4><p><img src="../assets/Bing-Wallpaper/bing.jpg"></p>
@@ -983,6 +993,422 @@
       </tags>
   </entry>
   <entry>
+    <title>OK1046a-C2 FlexBuild 使用记录</title>
+    <url>/ok1046a-c2-flexbuild/</url>
+    <content><![CDATA[<h3 id="FlexBuild-使用"><a href="#FlexBuild-使用" class="headerlink" title="FlexBuild 使用"></a>FlexBuild 使用</h3><h4 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>orlinx@ubuntu:~$</code></td>
+</tr>
+<tr>
+<td align="center">创建work目录</td>
+<td align="left"><code>mkdir -p /home/forlinx/work</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">使用 root 用户操作</td>
+<td align="left"><code>sudo -s</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>root@ubuntu:~$</code></td>
+</tr>
+<tr>
+<td align="center">解压到work目录</td>
+<td align="left"><code>tar xvf OK10xx-linux-fs.tar.bz2 -C /home/forlinx/work</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">进入指定目录</td>
+<td align="left"><code>cd /home/forlinx/work/OK10xx-linux-fs/flexbuild</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>root@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">设置环境变量</td>
+<td align="left"><code>source setup.env</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="FlexBuild目录文件简介"><a href="#FlexBuild目录文件简介" class="headerlink" title="FlexBuild目录文件简介 "></a>FlexBuild目录文件简介 <span id="more"></span></h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:~/work/OK10xx-linux-fs/flexbuild</span><span class="variable">$ </span>tree -L <span class="number">1</span></span><br><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── configs</span><br><span class="line">├── docker</span><br><span class="line">├── docs</span><br><span class="line">├── <span class="keyword">include</span></span><br><span class="line">├── LICENSE</span><br><span class="line">├── logs</span><br><span class="line">├── Makefile</span><br><span class="line">├── packages</span><br><span class="line">├── README.md</span><br><span class="line">├── setup.env</span><br><span class="line">└── tools</span><br><span class="line"><span class="number">8</span> directories, <span class="number">4</span> files</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="center">packages</th>
+<th align="center">build</th>
+<th align="center">configs</th>
+<th align="center">tools</th>
+<th align="center">setup.env</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">源码目录，含有 linux firmware apps ramdisk 的源码</td>
+<td align="center">编译目录，用于编译过程产生的临时文件，编译结果位于 build/images 目录</td>
+<td align="center">编译配置，flexbuild 适用于多个平台，针对不同平台的配置信息</td>
+<td align="center">编译工具，flex-builder flex-installer 等</td>
+<td align="center">用于配置编译环境变量</td>
+</tr>
+</tbody></table>
+<h4 id="全部编译"><a href="#全部编译" class="headerlink" title="全部编译"></a>全部编译</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">之前编译过 apps执行清空</td>
+<td align="left"><code>flex-builder -i clean-apps</code></td>
+<td align="left"><code>build/apps/components_arm64</code></td>
+</tr>
+<tr>
+<td align="center">全部编译</td>
+<td align="left"><code>flex-builder -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>build/images</code></td>
+</tr>
+<tr>
+<td align="center">生成的文件位于 build/images 目录</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="Image目录文件简介"><a href="#Image目录文件简介" class="headerlink" title="Image目录文件简介"></a>Image目录文件简介</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:~/work/OK10xx-linux-fs/flexbuild/build/images</span><span class="variable">$ </span>tree</span><br><span class="line">.</span><br><span class="line">├── boot</span><br><span class="line">│   ├── fsl-ls1046a-rdb-sdk<span class="number">-1133</span><span class="number">-5</span>a59.dtb</span><br><span class="line">│   ├── Image</span><br><span class="line">│   └── ls1046ardb_boot.scr</span><br><span class="line">├── config.ini</span><br><span class="line">├── firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line">├── firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line">├── ls1046ardb_update.scr</span><br><span class="line">├── ubuntu.img</span><br><span class="line">└── usb_update.itb</span><br><span class="line"><span class="number">1</span> directory, <span class="number">9</span> files</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="center">Scripts</th>
+<th align="center">Tools</th>
+<th align="center">Rootfs</th>
+<th align="center">Firmware</th>
+<th align="center">Config</th>
+<th align="center">Boot</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ls1046ardb_update.scr</td>
+<td align="center">usb_update.itb</td>
+<td align="center">ubuntu.img openwrt.img</td>
+<td align="center">firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</td>
+<td align="center">config.ini</td>
+<td align="center">内核及设备树等</td>
+</tr>
+</tbody></table>
+<h4 id="单独编译Firmware"><a href="#单独编译Firmware" class="headerlink" title="单独编译Firmware"></a>单独编译Firmware</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">执行清空</td>
+<td align="left"><code>flex-builder -iclean-firmware</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">编译qspi</td>
+<td align="left"><code>flex-builder -c firmware -a arm64 -m ls1046ardb -b qspi -S 1133</code></td>
+<td align="left"><code>build/firmware/u-boot/ls1046ardb/uboot_ls1046ardb_qspi.bin</code></td>
+</tr>
+<tr>
+<td align="center">编译sd</td>
+<td align="left"><code>flex-builder -c firmware -a arm64 -m ls1046ardb -b sd -S 1133</code></td>
+<td align="left"><code>build/firmware/u-boot/ls1046ardb/uboot_ls1046ardb_sdcard_1133_5a59.bin</code></td>
+</tr>
+<tr>
+<td align="center">生成镜像qspi</td>
+<td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b qspi -S 1133</code></td>
+<td align="left"><code>build/images/firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</code></td>
+</tr>
+<tr>
+<td align="center">生成镜像sd</td>
+<td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b sd -S 1133</code></td>
+<td align="left"><code>build/images/firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</code></td>
+</tr>
+</tbody></table>
+<h4 id="单独编译内核及模块"><a href="#单独编译内核及模块" class="headerlink" title="单独编译内核及模块"></a>单独编译内核及模块</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">默认（修改覆盖）配置文件</td>
+<td align="left"></td>
+<td align="left"><code>packages/linux/linux/arch/arm64/configs/ls1046_defconfig</code></td>
+</tr>
+<tr>
+<td align="center">执行清空</td>
+<td align="left"><code>flex-builder -i clean-linux</code></td>
+<td align="left"><code>build/linux</code></td>
+</tr>
+<tr>
+<td align="center">配置内核及配置文件路径</td>
+<td align="left"><code>flex-builder -c linux:custom -m ls1046ardb -a arm64</code></td>
+<td align="left"><code>build/linux/linux/arm64/output/LSDK-18.06-V4.14/.config</code></td>
+</tr>
+<tr>
+<td align="center">编译内核</td>
+<td align="left"><code>flex-builder -c linux -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>build/linux/linux/arm64</code></td>
+</tr>
+<tr>
+<td align="center">编译cryptodev驱动</td>
+<td align="left"><code>flex-builder -c cryptodev-linux -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>packages/linux/crytodev-linux</code></td>
+</tr>
+<tr>
+<td align="center">驱动模块更新到文件系统</td>
+<td align="left"><code>flex-builder -i merge-component -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>build/rfs/rootfs_ubuntu_bionic_arm64</code></td>
+</tr>
+<tr>
+<td align="center">重新生成ubuntu镜像</td>
+<td align="left"><code>flex-builder -i compressrfs -m ls1046ardb</code></td>
+<td align="left"><code>build/images/ubuntu.img</code></td>
+</tr>
+<tr>
+<td align="center">内核、设备树文件更新到 <code>build/images</code> 目录</td>
+<td align="left"><code>flex-builder -i genboot -m ls1046ardb</code></td>
+<td align="left"><code>build/images/boot</code></td>
+</tr>
+</tbody></table>
+<h4 id="单独编译-app-程序"><a href="#单独编译-app-程序" class="headerlink" title="单独编译 app 程序"></a>单独编译 app 程序</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">之前编译过 apps执行清空</td>
+<td align="left"><code>flex-builder -i clean-apps</code></td>
+<td align="left"><code>build/apps/components_arm64</code></td>
+</tr>
+<tr>
+<td align="center">更新 app 到文件系统</td>
+<td align="left"><code>flex-builder -i merge-component -a arm64 -m ls1046ardb</code></td>
+<td align="left"><code>build/rfs/rootfs_ubuntu_bionic_arm64</code></td>
+</tr>
+<tr>
+<td align="center">重新生成 ubuntu 镜像</td>
+<td align="left"><code>flex-builder -i compressrfs -m ls1046ardb</code></td>
+<td align="left"><code>build/images/ubuntu.img</code></td>
+</tr>
+</tbody></table>
+<h3 id="TFTP-烧写-QSPI"><a href="#TFTP-烧写-QSPI" class="headerlink" title="TFTP 烧写 QSPI"></a>TFTP 烧写 QSPI</h3><h4 id="TFTP-环境搭建"><a href="#TFTP-环境搭建" class="headerlink" title="TFTP 环境搭建"></a>TFTP 环境搭建</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work$</code></td>
+</tr>
+<tr>
+<td align="center">安装 tftp-hpa 和 tftpd-hpa</td>
+<td align="left"><code>sudo apt-get install tftp-hpa tftpd-hpa xinetd</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">重新启动 tftp 服务</td>
+<td align="left"><code>sudo service tftpd-hpa restart</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">tftp 配置文件</td>
+<td align="left"><code>cat /etc/default/tftpd-hpa</code></td>
+<td align="left"><code>/etc/default/tftpd-hpa</code></td>
+</tr>
+<tr>
+<td align="center">行本地 tftp 测试 目录权限</td>
+<td align="left"><code>sudo chmod 777 -R /var/lib/tftpboot</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">写入测试内容</td>
+<td align="left"><code>echo &quot;tl8517.com&quot; &gt; /var/lib/tftpboot/test</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">本地TFTP</td>
+<td align="left"><code>tftp localhost</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">下载test当前目录</td>
+<td align="left"><code>get test</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">退出TFTP</td>
+<td align="left"><code>q</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">当前test内容</td>
+<td align="left"><code>cat test</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="TFTP-烧写-QSPI-1"><a href="#TFTP-烧写-QSPI-1" class="headerlink" title="TFTP 烧写 QSPI"></a>TFTP 烧写 QSPI</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
+</tr>
+<tr>
+<td align="center">虚拟机 IP</td>
+<td align="left"><code>ifconfig</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">拷贝 Firmware 文件到 TFTP 目录</td>
+<td align="left"><code>cp build/images/firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img /var/lib/tftpboot/</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">开发板停留在 uboot 命令行</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">配置开发板 IP</td>
+<td align="left"><code>setenv ipaddr 10.1.1.111</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">配置 Server IP</td>
+<td align="left"><code>setenv serverip 10.1.1.100</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">Ping 测试</td>
+<td align="left"><code>ping 10.1.1.100</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">下载文件到内存</td>
+<td align="left"><code>tftp 0x90000000 firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">检测QSPI FLASH</td>
+<td align="left"><code>sf probe 0:0</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">擦除指定位置,指定长度的flash内容</td>
+<td align="left"><code>sf erase 0 0x1000000</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">写内存数据到flash</td>
+<td align="left"><code>sf write 0x90000000 0 0x1000000</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">重启</td>
+<td align="left"><code>reset</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="制作-TF-卡启动"><a href="#制作-TF-卡启动" class="headerlink" title="制作 TF 卡启动"></a>制作 TF 卡启动</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">命令</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">执行下列命令的路径</td>
+<td align="left"></td>
+<td align="left"><code>forlinx@ubuntu:~/work$</code></td>
+</tr>
+<tr>
+<td align="center">查看设备节点</td>
+<td align="left"><code>ls /dev/sdb*</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">firmware_ls1046ardb_uboot_sdboot_1040_5559.img 放到 Ubuntu 的 work 目录</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">烧写 firmware 到 TF 卡</td>
+<td align="left"><code>sudo dd if=firmware_ls1046ardb_uboot_sdboot_1040_5559.img of=/dev/sdb seek=8 bs=512</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="U-盘烧写-eMMC-和-QSPI"><a href="#U-盘烧写-eMMC-和-QSPI" class="headerlink" title="U 盘烧写 eMMC 和 QSPI"></a>U 盘烧写 eMMC 和 QSPI</h4><p>U盘FAT32分区内的文件(同FlexBuild生成的文件)：</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:/media/forlinx/a</span><span class="variable">$ </span>tree</span><br><span class="line">.</span><br><span class="line">├── boot</span><br><span class="line">│   ├── fsl-ls1046a-rdb-sdk<span class="number">-1133</span><span class="number">-5</span>a59.dtb</span><br><span class="line">│   ├── Image</span><br><span class="line">│   └── ls1046ardb_boot.scr</span><br><span class="line">├── config.ini</span><br><span class="line">├── firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line">├── firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line">├── ls1046ardb_update.scr</span><br><span class="line">├── ubuntu.img</span><br><span class="line">└── usb_update.itb</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> directory, <span class="number">9</span> files</span><br></pre></td></tr></table></figure>
+
+<p>如果开发板 QSPI 无法启动将<code>config.ini</code>中的 “qspiflsh” 改为<code>true</code></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">forlinx@ubuntu:/media/forlinx/a$ cat config.ini </span><br><span class="line">[config]</span><br><span class="line"><span class="attribute">platform</span>=ok1046-c</span><br><span class="line"><span class="attribute">qspifirmware</span>=firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line"><span class="attribute">sdfirmware</span>=firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line"><span class="attribute">rootfs</span>=ubuntu.img</span><br><span class="line"><span class="attribute">qspiflash</span>=<span class="literal">true</span></span><br><span class="line"><span class="attribute">emmcflash</span>=<span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>TF 卡启动开发板，停在uboot 命令行，此时弹出 TF 卡，系统自动将切换到 eMMC，输入 boot 进入烧写流程。（如果您 QSPI 能够正常引导系统，那么仅插入 U 盘启动系统即可，无需操作 TF 卡）</p>
+]]></content>
+      <categories>
+        <category>embedded system</category>
+        <category>openwrt</category>
+      </categories>
+      <tags>
+        <tag>flexbuild</tag>
+        <tag>1046a</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Opencore 的编译, 驱动的编译及导出</title>
     <url>/opencore-build/</url>
     <content><![CDATA[<h1 id="需要编译源码：-OpenCorePkg"><a href="#需要编译源码：-OpenCorePkg" class="headerlink" title="需要编译源码：**OpenCorePkg**"></a>需要编译源码：**<a href="https://github.com/acidanthera/OpenCorePkg">OpenCorePkg</a>**</h1><p>安装工具：Command Line Tools</p>
@@ -1272,6 +1698,16 @@
         <tag>默认密码</tag>
         <tag>默认语言</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>OpenWrt of OK1046A-C2 的内核，设备树，文件系统的路径</title>
+    <url>/openwrt-ok1046ardb/</url>
+    <content><![CDATA[<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p><code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/root-layerscape</code></p>
+<p>文件系统 IMG 文件：<br>在目录 <code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/</code> 中执行：<br><code>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</code></p>
+<h4 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/Image</code></p>
+<h4 id="设备树"><a href="#设备树" class="headerlink" title="设备树"></a>设备树</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/dts/freescale/</code></p>
+<p>制作镜像<br>cd /home/forlinx/work/openwrt/staging_dir/target-aarch64_generic_musl<br>rm root-layerscape/lib/preinit/80_mount_root<br>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</p>
+]]></content>
   </entry>
   <entry>
     <title>OpenWRT qbittorrent WebUI 启动命令</title>
@@ -1890,6 +2326,28 @@
       </tags>
   </entry>
   <entry>
+    <title>舒尔se425更换外壳（se535外壳）</title>
+    <url>/shure-se425/</url>
+    <content><![CDATA[<h2 id="上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。"><a href="#上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。" class="headerlink" title="上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。"></a>上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的<a href="https://www.shure.com.cn/zh-CN/products/earphones/se425">se425</a>外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。<span id="more"></span></h2><p><img src="../assets/Shure-SE425/DSC_0011-1024x576.jpg" alt="舒尔se425"></p>
+<p><img src="../assets/Shure-SE425/DSC_0012-1024x576.jpg" alt="舒尔se425"></p>
+<p><img src="../assets/Shure-SE425/DSC_0014-1024x576.jpg" alt="舒尔se425"></p>
+<h3 id="这三张是原装425的照片，外壳结合的地方已经脱离了。"><a href="#这三张是原装425的照片，外壳结合的地方已经脱离了。" class="headerlink" title="这三张是原装425的照片，外壳结合的地方已经脱离了。"></a>这三张是原装425的照片，外壳结合的地方已经脱离了。</h3><p><img src="../assets/Shure-SE425/DSC_0017-1024x576.jpg" alt="舒尔se425"></p>
+<p><img src="../assets/Shure-SE425/DSC_0018-1024x576.jpg" alt="舒尔se425外壳"></p>
+<h3 id="开盖后的425"><a href="#开盖后的425" class="headerlink" title="开盖后的425"></a>开盖后的425</h3><p><img src="../assets/Shure-SE425/DSC_0020-1024x576.jpg" alt="舒尔se425外壳"></p>
+<h3 id="拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼"><a href="#拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼" class="headerlink" title="拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼~~~"></a>拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼~~~</h3><p><img src="../assets/Shure-SE425/DSC_0019-1024x576.jpg" alt="舒尔se425外壳"></p>
+<h3 id="然后有导管的这一瓣，我没有买导管里的过滤网。"><a href="#然后有导管的这一瓣，我没有买导管里的过滤网。" class="headerlink" title="然后有导管的这一瓣，我没有买导管里的过滤网。"></a>然后有导管的这一瓣，我没有买导管里的过滤网。</h3><p><img src="../assets/Shure-SE425/DSC_0022-1024x576.jpg" alt="舒尔se425滤网"></p>
+<h3 id="我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。"><a href="#我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。" class="headerlink" title="我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。"></a>我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。</h3><p><img src="../assets/Shure-SE425/DSC_0007-1024x576.jpg" alt="535外壳"></p>
+<p><img src="../assets/Shure-SE425/DSC_0016-1024x576.jpg" alt="535外壳"></p>
+<h3 id="新壳的图片"><a href="#新壳的图片" class="headerlink" title="新壳的图片"></a>新壳的图片</h3><p><img src="../assets/Shure-SE425/DSC_0015-1024x576.jpg" alt="535外壳"></p>
+<h3 id="有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。"><a href="#有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。" class="headerlink" title="有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。"></a>有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。</h3><p><img src="../assets/Shure-SE425/DSC_0023-1024x576.jpg" alt="成品"></p>
+<p><img src="../assets/Shure-SE425/DSC_0024-1024x576.jpg" alt="成品"></p>
+<h3 id="移植到新壳后就是玩捆绑游戏了。"><a href="#移植到新壳后就是玩捆绑游戏了。" class="headerlink" title="移植到新壳后就是玩捆绑游戏了。"></a>移植到新壳后就是玩捆绑游戏了。</h3><p>损坏的滤网，近期是不会在购买，更新了，有时间在处理吧。</p>
+<h1 id="晚姐，撒花。"><a href="#晚姐，撒花。" class="headerlink" title="晚姐，撒花。"></a>晚姐，撒花。</h1><h5 id="最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。"><a href="#最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。" class="headerlink" title="最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。"></a>最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。</h5>]]></content>
+      <categories>
+        <category>misc</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Ubuntu 命令 快捷键 使用</title>
     <url>/ubuntu-command/</url>
     <content><![CDATA[<h4 id="ubuntu版本查看命令"><a href="#ubuntu版本查看命令" class="headerlink" title="ubuntu版本查看命令"></a>ubuntu版本查看命令</h4><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>cat /<span class="built_in">proc</span>/version</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>uname -a</span><br><span class="line">csjtl<span class="variable">@ubuntu</span><span class="symbol">:~</span><span class="variable">$ </span>lsb_release -a</span><br></pre></td></tr></table></figure>
@@ -1942,28 +2400,6 @@
       <categories>
         <category>system</category>
         <category>ubuntu</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>舒尔se425更换外壳（se535外壳）</title>
-    <url>/shure-se425/</url>
-    <content><![CDATA[<h2 id="上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。"><a href="#上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。" class="headerlink" title="上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的se425外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。"></a>上个月找了一份工作，没大有时间写文章了。现在上班坐公交在路上要大约一个半小时，就又用来学英语了。很久以前买的舒尔的<a href="https://www.shure.com.cn/zh-CN/products/earphones/se425">se425</a>外壳有点开裂，就网上买了535（商家表示和425通用）的壳自己更换一下，攒了点经验。<span id="more"></span></h2><p><img src="../assets/Shure-SE425/DSC_0011-1024x576.jpg" alt="舒尔se425"></p>
-<p><img src="../assets/Shure-SE425/DSC_0012-1024x576.jpg" alt="舒尔se425"></p>
-<p><img src="../assets/Shure-SE425/DSC_0014-1024x576.jpg" alt="舒尔se425"></p>
-<h3 id="这三张是原装425的照片，外壳结合的地方已经脱离了。"><a href="#这三张是原装425的照片，外壳结合的地方已经脱离了。" class="headerlink" title="这三张是原装425的照片，外壳结合的地方已经脱离了。"></a>这三张是原装425的照片，外壳结合的地方已经脱离了。</h3><p><img src="../assets/Shure-SE425/DSC_0017-1024x576.jpg" alt="舒尔se425"></p>
-<p><img src="../assets/Shure-SE425/DSC_0018-1024x576.jpg" alt="舒尔se425外壳"></p>
-<h3 id="开盖后的425"><a href="#开盖后的425" class="headerlink" title="开盖后的425"></a>开盖后的425</h3><p><img src="../assets/Shure-SE425/DSC_0020-1024x576.jpg" alt="舒尔se425外壳"></p>
-<h3 id="拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼"><a href="#拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼" class="headerlink" title="拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼~~~"></a>拿出单元分频器，除胶后的图片。图片中的白色的并不是胶，我在拆第二个时才发现，那是个胶圈，我把它当胶给撤下来了。心疼~~~</h3><p><img src="../assets/Shure-SE425/DSC_0019-1024x576.jpg" alt="舒尔se425外壳"></p>
-<h3 id="然后有导管的这一瓣，我没有买导管里的过滤网。"><a href="#然后有导管的这一瓣，我没有买导管里的过滤网。" class="headerlink" title="然后有导管的这一瓣，我没有买导管里的过滤网。"></a>然后有导管的这一瓣，我没有买导管里的过滤网。</h3><p><img src="../assets/Shure-SE425/DSC_0022-1024x576.jpg" alt="舒尔se425滤网"></p>
-<h3 id="我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。"><a href="#我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。" class="headerlink" title="我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。"></a>我把旧外壳切了，拿出来的。这玩意还不便宜呢！可是我在往新壳中安装时把第一个给捅坏了。最后发现牙签的粗细正好可以把过滤网捅进去。</h3><p><img src="../assets/Shure-SE425/DSC_0007-1024x576.jpg" alt="535外壳"></p>
-<p><img src="../assets/Shure-SE425/DSC_0016-1024x576.jpg" alt="535外壳"></p>
-<h3 id="新壳的图片"><a href="#新壳的图片" class="headerlink" title="新壳的图片"></a>新壳的图片</h3><p><img src="../assets/Shure-SE425/DSC_0015-1024x576.jpg" alt="535外壳"></p>
-<h3 id="有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。"><a href="#有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。" class="headerlink" title="有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。"></a>有导管的一侧，图片看不清，单元就是在这里将声音通过导管传递出去的。</h3><p><img src="../assets/Shure-SE425/DSC_0023-1024x576.jpg" alt="成品"></p>
-<p><img src="../assets/Shure-SE425/DSC_0024-1024x576.jpg" alt="成品"></p>
-<h3 id="移植到新壳后就是玩捆绑游戏了。"><a href="#移植到新壳后就是玩捆绑游戏了。" class="headerlink" title="移植到新壳后就是玩捆绑游戏了。"></a>移植到新壳后就是玩捆绑游戏了。</h3><p>损坏的滤网，近期是不会在购买，更新了，有时间在处理吧。</p>
-<h1 id="晚姐，撒花。"><a href="#晚姐，撒花。" class="headerlink" title="晚姐，撒花。"></a>晚姐，撒花。</h1><h5 id="最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。"><a href="#最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。" class="headerlink" title="最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。"></a>最后测试了一下，声音没有问题。音质也好了，果然达到了535的音质。那些专业的术语我就不说了，大家都知道。</h5>]]></content>
-      <categories>
-        <category>misc</category>
       </categories>
   </entry>
   <entry>
@@ -2456,442 +2892,6 @@
         <tag>最大</tag>
         <tag>限制</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>OK1046a-C2 FlexBuild 使用记录</title>
-    <url>/ok1046a-c2-flexbuild/</url>
-    <content><![CDATA[<h3 id="FlexBuild-使用"><a href="#FlexBuild-使用" class="headerlink" title="FlexBuild 使用"></a>FlexBuild 使用</h3><h4 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>orlinx@ubuntu:~$</code></td>
-</tr>
-<tr>
-<td align="center">创建work目录</td>
-<td align="left"><code>mkdir -p /home/forlinx/work</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">使用 root 用户操作</td>
-<td align="left"><code>sudo -s</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>root@ubuntu:~$</code></td>
-</tr>
-<tr>
-<td align="center">解压到work目录</td>
-<td align="left"><code>tar xvf OK10xx-linux-fs.tar.bz2 -C /home/forlinx/work</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">进入指定目录</td>
-<td align="left"><code>cd /home/forlinx/work/OK10xx-linux-fs/flexbuild</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>root@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">设置环境变量</td>
-<td align="left"><code>source setup.env</code></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h4 id="FlexBuild目录文件简介"><a href="#FlexBuild目录文件简介" class="headerlink" title="FlexBuild目录文件简介 "></a>FlexBuild目录文件简介 <span id="more"></span></h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:~/work/OK10xx-linux-fs/flexbuild</span><span class="variable">$ </span>tree -L <span class="number">1</span></span><br><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── configs</span><br><span class="line">├── docker</span><br><span class="line">├── docs</span><br><span class="line">├── <span class="keyword">include</span></span><br><span class="line">├── LICENSE</span><br><span class="line">├── logs</span><br><span class="line">├── Makefile</span><br><span class="line">├── packages</span><br><span class="line">├── README.md</span><br><span class="line">├── setup.env</span><br><span class="line">└── tools</span><br><span class="line"><span class="number">8</span> directories, <span class="number">4</span> files</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th align="center">packages</th>
-<th align="center">build</th>
-<th align="center">configs</th>
-<th align="center">tools</th>
-<th align="center">setup.env</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">源码目录，含有 linux firmware apps ramdisk 的源码</td>
-<td align="center">编译目录，用于编译过程产生的临时文件，编译结果位于 build/images 目录</td>
-<td align="center">编译配置，flexbuild 适用于多个平台，针对不同平台的配置信息</td>
-<td align="center">编译工具，flex-builder flex-installer 等</td>
-<td align="center">用于配置编译环境变量</td>
-</tr>
-</tbody></table>
-<h4 id="全部编译"><a href="#全部编译" class="headerlink" title="全部编译"></a>全部编译</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">之前编译过 apps执行清空</td>
-<td align="left"><code>flex-builder -i clean-apps</code></td>
-<td align="left"><code>build/apps/components_arm64</code></td>
-</tr>
-<tr>
-<td align="center">全部编译</td>
-<td align="left"><code>flex-builder -a arm64 -m ls1046ardb</code></td>
-<td align="left"><code>build/images</code></td>
-</tr>
-<tr>
-<td align="center">生成的文件位于 build/images 目录</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h4 id="Image目录文件简介"><a href="#Image目录文件简介" class="headerlink" title="Image目录文件简介"></a>Image目录文件简介</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:~/work/OK10xx-linux-fs/flexbuild/build/images</span><span class="variable">$ </span>tree</span><br><span class="line">.</span><br><span class="line">├── boot</span><br><span class="line">│   ├── fsl-ls1046a-rdb-sdk<span class="number">-1133</span><span class="number">-5</span>a59.dtb</span><br><span class="line">│   ├── Image</span><br><span class="line">│   └── ls1046ardb_boot.scr</span><br><span class="line">├── config.ini</span><br><span class="line">├── firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line">├── firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line">├── ls1046ardb_update.scr</span><br><span class="line">├── ubuntu.img</span><br><span class="line">└── usb_update.itb</span><br><span class="line"><span class="number">1</span> directory, <span class="number">9</span> files</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th align="center">Scripts</th>
-<th align="center">Tools</th>
-<th align="center">Rootfs</th>
-<th align="center">Firmware</th>
-<th align="center">Config</th>
-<th align="center">Boot</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">ls1046ardb_update.scr</td>
-<td align="center">usb_update.itb</td>
-<td align="center">ubuntu.img openwrt.img</td>
-<td align="center">firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</td>
-<td align="center">config.ini</td>
-<td align="center">内核及设备树等</td>
-</tr>
-</tbody></table>
-<h4 id="单独编译Firmware"><a href="#单独编译Firmware" class="headerlink" title="单独编译Firmware"></a>单独编译Firmware</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">执行清空</td>
-<td align="left"><code>flex-builder -iclean-firmware</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">编译qspi</td>
-<td align="left"><code>flex-builder -c firmware -a arm64 -m ls1046ardb -b qspi -S 1133</code></td>
-<td align="left"><code>build/firmware/u-boot/ls1046ardb/uboot_ls1046ardb_qspi.bin</code></td>
-</tr>
-<tr>
-<td align="center">编译sd</td>
-<td align="left"><code>flex-builder -c firmware -a arm64 -m ls1046ardb -b sd -S 1133</code></td>
-<td align="left"><code>build/firmware/u-boot/ls1046ardb/uboot_ls1046ardb_sdcard_1133_5a59.bin</code></td>
-</tr>
-<tr>
-<td align="center">生成镜像qspi</td>
-<td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b qspi -S 1133</code></td>
-<td align="left"><code>build/images/firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</code></td>
-</tr>
-<tr>
-<td align="center">生成镜像sd</td>
-<td align="left"><code>flex-builder -i mkfw -a arm64 -m ls1046ardb -b sd -S 1133</code></td>
-<td align="left"><code>build/images/firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</code></td>
-</tr>
-</tbody></table>
-<h4 id="单独编译内核及模块"><a href="#单独编译内核及模块" class="headerlink" title="单独编译内核及模块"></a>单独编译内核及模块</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">默认（修改覆盖）配置文件</td>
-<td align="left"></td>
-<td align="left"><code>packages/linux/linux/arch/arm64/configs/ls1046_defconfig</code></td>
-</tr>
-<tr>
-<td align="center">执行清空</td>
-<td align="left"><code>flex-builder -i clean-linux</code></td>
-<td align="left"><code>build/linux</code></td>
-</tr>
-<tr>
-<td align="center">配置内核及配置文件路径</td>
-<td align="left"><code>flex-builder -c linux:custom -m ls1046ardb -a arm64</code></td>
-<td align="left"><code>build/linux/linux/arm64/output/LSDK-18.06-V4.14/.config</code></td>
-</tr>
-<tr>
-<td align="center">编译内核</td>
-<td align="left"><code>flex-builder -c linux -a arm64 -m ls1046ardb</code></td>
-<td align="left"><code>build/linux/linux/arm64</code></td>
-</tr>
-<tr>
-<td align="center">编译cryptodev驱动</td>
-<td align="left"><code>flex-builder -c cryptodev-linux -a arm64 -m ls1046ardb</code></td>
-<td align="left"><code>packages/linux/crytodev-linux</code></td>
-</tr>
-<tr>
-<td align="center">驱动模块更新到文件系统</td>
-<td align="left"><code>flex-builder -i merge-component -a arm64 -m ls1046ardb</code></td>
-<td align="left"><code>build/rfs/rootfs_ubuntu_bionic_arm64</code></td>
-</tr>
-<tr>
-<td align="center">重新生成ubuntu镜像</td>
-<td align="left"><code>flex-builder -i compressrfs -m ls1046ardb</code></td>
-<td align="left"><code>build/images/ubuntu.img</code></td>
-</tr>
-<tr>
-<td align="center">内核、设备树文件更新到 <code>build/images</code> 目录</td>
-<td align="left"><code>flex-builder -i genboot -m ls1046ardb</code></td>
-<td align="left"><code>build/images/boot</code></td>
-</tr>
-</tbody></table>
-<h4 id="单独编译-app-程序"><a href="#单独编译-app-程序" class="headerlink" title="单独编译 app 程序"></a>单独编译 app 程序</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">之前编译过 apps执行清空</td>
-<td align="left"><code>flex-builder -i clean-apps</code></td>
-<td align="left"><code>build/apps/components_arm64</code></td>
-</tr>
-<tr>
-<td align="center">更新 app 到文件系统</td>
-<td align="left"><code>flex-builder -i merge-component -a arm64 -m ls1046ardb</code></td>
-<td align="left"><code>build/rfs/rootfs_ubuntu_bionic_arm64</code></td>
-</tr>
-<tr>
-<td align="center">重新生成 ubuntu 镜像</td>
-<td align="left"><code>flex-builder -i compressrfs -m ls1046ardb</code></td>
-<td align="left"><code>build/images/ubuntu.img</code></td>
-</tr>
-</tbody></table>
-<h3 id="TFTP-烧写-QSPI"><a href="#TFTP-烧写-QSPI" class="headerlink" title="TFTP 烧写 QSPI"></a>TFTP 烧写 QSPI</h3><h4 id="TFTP-环境搭建"><a href="#TFTP-环境搭建" class="headerlink" title="TFTP 环境搭建"></a>TFTP 环境搭建</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work$</code></td>
-</tr>
-<tr>
-<td align="center">安装 tftp-hpa 和 tftpd-hpa</td>
-<td align="left"><code>sudo apt-get install tftp-hpa tftpd-hpa xinetd</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">重新启动 tftp 服务</td>
-<td align="left"><code>sudo service tftpd-hpa restart</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">tftp 配置文件</td>
-<td align="left"><code>cat /etc/default/tftpd-hpa</code></td>
-<td align="left"><code>/etc/default/tftpd-hpa</code></td>
-</tr>
-<tr>
-<td align="center">行本地 tftp 测试 目录权限</td>
-<td align="left"><code>sudo chmod 777 -R /var/lib/tftpboot</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">写入测试内容</td>
-<td align="left"><code>echo &quot;tl8517.com&quot; &gt; /var/lib/tftpboot/test</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">本地TFTP</td>
-<td align="left"><code>tftp localhost</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">下载test当前目录</td>
-<td align="left"><code>get test</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">退出TFTP</td>
-<td align="left"><code>q</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">当前test内容</td>
-<td align="left"><code>cat test</code></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h4 id="TFTP-烧写-QSPI-1"><a href="#TFTP-烧写-QSPI-1" class="headerlink" title="TFTP 烧写 QSPI"></a>TFTP 烧写 QSPI</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work/OK10xx-linux-fs/flexbuild$</code></td>
-</tr>
-<tr>
-<td align="center">虚拟机 IP</td>
-<td align="left"><code>ifconfig</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">拷贝 Firmware 文件到 TFTP 目录</td>
-<td align="left"><code>cp build/images/firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img /var/lib/tftpboot/</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">开发板停留在 uboot 命令行</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">配置开发板 IP</td>
-<td align="left"><code>setenv ipaddr 10.1.1.111</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">配置 Server IP</td>
-<td align="left"><code>setenv serverip 10.1.1.100</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">Ping 测试</td>
-<td align="left"><code>ping 10.1.1.100</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">下载文件到内存</td>
-<td align="left"><code>tftp 0x90000000 firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">检测QSPI FLASH</td>
-<td align="left"><code>sf probe 0:0</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">擦除指定位置,指定长度的flash内容</td>
-<td align="left"><code>sf erase 0 0x1000000</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">写内存数据到flash</td>
-<td align="left"><code>sf write 0x90000000 0 0x1000000</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">重启</td>
-<td align="left"><code>reset</code></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h4 id="制作-TF-卡启动"><a href="#制作-TF-卡启动" class="headerlink" title="制作 TF 卡启动"></a>制作 TF 卡启动</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">命令</th>
-<th align="left">路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">执行下列命令的路径</td>
-<td align="left"></td>
-<td align="left"><code>forlinx@ubuntu:~/work$</code></td>
-</tr>
-<tr>
-<td align="center">查看设备节点</td>
-<td align="left"><code>ls /dev/sdb*</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">firmware_ls1046ardb_uboot_sdboot_1040_5559.img 放到 Ubuntu 的 work 目录</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">烧写 firmware 到 TF 卡</td>
-<td align="left"><code>sudo dd if=firmware_ls1046ardb_uboot_sdboot_1040_5559.img of=/dev/sdb seek=8 bs=512</code></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h4 id="U-盘烧写-eMMC-和-QSPI"><a href="#U-盘烧写-eMMC-和-QSPI" class="headerlink" title="U 盘烧写 eMMC 和 QSPI"></a>U 盘烧写 eMMC 和 QSPI</h4><p>U盘FAT32分区内的文件(同FlexBuild生成的文件)：</p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">forlinx<span class="variable">@ubuntu</span><span class="symbol">:/media/forlinx/a</span><span class="variable">$ </span>tree</span><br><span class="line">.</span><br><span class="line">├── boot</span><br><span class="line">│   ├── fsl-ls1046a-rdb-sdk<span class="number">-1133</span><span class="number">-5</span>a59.dtb</span><br><span class="line">│   ├── Image</span><br><span class="line">│   └── ls1046ardb_boot.scr</span><br><span class="line">├── config.ini</span><br><span class="line">├── firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line">├── firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line">├── ls1046ardb_update.scr</span><br><span class="line">├── ubuntu.img</span><br><span class="line">└── usb_update.itb</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> directory, <span class="number">9</span> files</span><br></pre></td></tr></table></figure>
-
-<p>如果开发板 QSPI 无法启动将<code>config.ini</code>中的 “qspiflsh” 改为<code>true</code></p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">forlinx@ubuntu:/media/forlinx/a$ cat config.ini </span><br><span class="line">[config]</span><br><span class="line"><span class="attribute">platform</span>=ok1046-c</span><br><span class="line"><span class="attribute">qspifirmware</span>=firmware_ls1046ardb_uboot_qspiboot_1133_5a59.img</span><br><span class="line"><span class="attribute">sdfirmware</span>=firmware_ls1046ardb_uboot_sdboot_1133_5a59.img</span><br><span class="line"><span class="attribute">rootfs</span>=ubuntu.img</span><br><span class="line"><span class="attribute">qspiflash</span>=<span class="literal">true</span></span><br><span class="line"><span class="attribute">emmcflash</span>=<span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>TF 卡启动开发板，停在uboot 命令行，此时弹出 TF 卡，系统自动将切换到 eMMC，输入 boot 进入烧写流程。（如果您 QSPI 能够正常引导系统，那么仅插入 U 盘启动系统即可，无需操作 TF 卡）</p>
-]]></content>
-      <categories>
-        <category>embedded system</category>
-        <category>openwrt</category>
-      </categories>
-      <tags>
-        <tag>flexbuild</tag>
-        <tag>1046a</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关闭 Adobe Acrobat Reader DC 右侧工具栏</title>
-    <url>/adobe-sidebar/</url>
-    <content><![CDATA[<p><strong>跳到此路径 <code>C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroApp\CHS</code> 打开Viewer.aapp文件。</strong><br>删除如下代码(需要管理员权限操作)：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Layout</span> <span class="attr">name</span>=<span class="string">&quot;Default&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">RHP</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Component</span> <span class="attr">name</span>=<span class="string">&quot;AppShortcutListView&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Custom&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">RHP</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>adobe</tag>
-        <tag>sidebar</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OpenWrt of OK1046A-C2 的内核，设备树，文件系统的路径</title>
-    <url>/openwrt-ok1046ardb/</url>
-    <content><![CDATA[<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p><code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/root-layerscape</code></p>
-<p>文件系统 IMG 文件：<br>在目录 <code>/OK104x-linux-openwrt-C2/staging_dir/target-aarch64_generic_musl/</code> 中执行：<br><code>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</code></p>
-<h4 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/Image</code></p>
-<h4 id="设备树"><a href="#设备树" class="headerlink" title="设备树"></a>设备树</h4><p><code>/OK104x-linux-openwrt-C2/build_dir/target-aarch64_generic_musl/linux-layerscape_armv8_64b/linux-4.9.63/arch/arm64/boot/dts/freescale/</code></p>
-<p>制作镜像<br>cd /home/forlinx/work/openwrt/staging_dir/target-aarch64_generic_musl<br>rm root-layerscape/lib/preinit/80_mount_root<br>sudo make_ext4fs -s -T -I -l 7489978368 OpenWRT.img root-layerscape</p>
-]]></content>
   </entry>
   <entry>
     <title>404</title>
