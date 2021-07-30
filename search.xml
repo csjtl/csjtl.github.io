@@ -2937,4 +2937,1018 @@
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/docs/Markdown%E8%AF%AD%E6%B3%95.html</url>
+    <content><![CDATA[<hr>
+<hr>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><h4 id="-3"><a href="#-3" class="headerlink" title=""></a></h4><h5 id="-4"><a href="#-4" class="headerlink" title=""></a></h5><h6 id="-5"><a href="#-5" class="headerlink" title=""></a></h6><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>$$</p>
+<p>$$</p>
+<ol>
+<li></li>
+</ol>
+<ul>
+<li></li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> </p>
+</li>
+</ul>
+<p>[</p>
+<p>]:</p>
+<p>[^undefined]:</p>
+<hr>
+<hr>
+<p>**</p>
+<p><u></u></p>
+<p>``<br>$$</p>
+<p>$$</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<!---->
+
+
+
+<p><a href=""></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Documentation</title>
+    <url>/docs/index.html</url>
+    <content><![CDATA[<p>English Grammar Docs<br>英语语法文档</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>专有形容词词汇表</title>
+    <url>/docs/english-grammar/appendices-adj-glossary.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>名词词汇表</title>
+    <url>/docs/english-grammar/appendices-noun-glossary.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>动词词汇表</title>
+    <url>/docs/english-grammar/appendices-verb-glossary.html</url>
+    <content><![CDATA[<h2 id="常用不及物动词"><a href="#常用不及物动词" class="headerlink" title="常用不及物动词"></a>常用不及物动词</h2><table>
+<thead>
+<tr>
+<th align="left">原型</th>
+<th align="left">过去式</th>
+<th align="left">过去分词</th>
+<th align="left">现在分词</th>
+<th align="left">第三人称单数格式</th>
+<th align="left">能否用于现在进行时态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">bathe     洗澡</td>
+<td align="left">bathed</td>
+<td align="left">bathed</td>
+<td align="left">bathing</td>
+<td align="left">bathes</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">chat       聊天</td>
+<td align="left">chatted</td>
+<td align="left">chatted</td>
+<td align="left">chatting</td>
+<td align="left">chats</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">come     来</td>
+<td align="left">came</td>
+<td align="left">come</td>
+<td align="left">coming</td>
+<td align="left">comes</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">cough    咳嗽</td>
+<td align="left">coughed</td>
+<td align="left">coughed</td>
+<td align="left">coughing</td>
+<td align="left">coughs</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">cry         哭</td>
+<td align="left">cried</td>
+<td align="left">cried</td>
+<td align="left">crying</td>
+<td align="left">cries</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">dance    跳舞</td>
+<td align="left">danced</td>
+<td align="left">danced</td>
+<td align="left">dancing</td>
+<td align="left">dances</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">die         死</td>
+<td align="left">died</td>
+<td align="left">died</td>
+<td align="left">dying</td>
+<td align="left">dies</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">fall         掉下</td>
+<td align="left">fell</td>
+<td align="left">fallen</td>
+<td align="left">falling</td>
+<td align="left">flies</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">fly          飞</td>
+<td align="left">flew</td>
+<td align="left">flown</td>
+<td align="left">flying</td>
+<td align="left">flies</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">go         走</td>
+<td align="left">went</td>
+<td align="left">gone</td>
+<td align="left">going</td>
+<td align="left">goes</td>
+<td align="left">否</td>
+</tr>
+<tr>
+<td align="left">jump     跳</td>
+<td align="left">jumped</td>
+<td align="left">jumped</td>
+<td align="left">jumping</td>
+<td align="left">jumps</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">laugh    大笑</td>
+<td align="left">laughed</td>
+<td align="left">laughed</td>
+<td align="left">laughing</td>
+<td align="left">laughs</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">listen    听</td>
+<td align="left">listened</td>
+<td align="left">listened</td>
+<td align="left">listening</td>
+<td align="left">laughs</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">live       居住</td>
+<td align="left">lived</td>
+<td align="left">lived</td>
+<td align="left">living</td>
+<td align="left">lives</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">look     看</td>
+<td align="left">looked</td>
+<td align="left">looked</td>
+<td align="left">looking</td>
+<td align="left">looks</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">rest      休息</td>
+<td align="left">rested</td>
+<td align="left">tested</td>
+<td align="left">testing</td>
+<td align="left">tests</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">run       跑</td>
+<td align="left">ran</td>
+<td align="left">run</td>
+<td align="left">running</td>
+<td align="left">runs</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">sit        坐</td>
+<td align="left">sat</td>
+<td align="left">sat</td>
+<td align="left">sitting</td>
+<td align="left">sits</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">sleep   睡觉</td>
+<td align="left">slept</td>
+<td align="left">slept</td>
+<td align="left">sleeping</td>
+<td align="left">sleeps</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">smile   笑</td>
+<td align="left">smiled</td>
+<td align="left">smiled</td>
+<td align="left">smiling</td>
+<td align="left">smils</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">stand  站</td>
+<td align="left">stood</td>
+<td align="left">stood</td>
+<td align="left">standing</td>
+<td align="left">stands</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">stay    留下</td>
+<td align="left">stayed</td>
+<td align="left">stayed</td>
+<td align="left">staying</td>
+<td align="left">stays</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">swim  游泳</td>
+<td align="left">swam</td>
+<td align="left">swum</td>
+<td align="left">swimming</td>
+<td align="left">swims</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">travel  旅行</td>
+<td align="left">travelled</td>
+<td align="left">travelled</td>
+<td align="left">travelling</td>
+<td align="left">travels</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">walk   步行</td>
+<td align="left">walked</td>
+<td align="left">walked</td>
+<td align="left">walking</td>
+<td align="left">walks</td>
+<td align="left">能</td>
+</tr>
+<tr>
+<td align="left">work  工作</td>
+<td align="left">worked</td>
+<td align="left">worked</td>
+<td align="left">working</td>
+<td align="left">works</td>
+<td align="left">能</td>
+</tr>
+</tbody></table>
+<h2 id="常用及物动词"><a href="#常用及物动词" class="headerlink" title="常用及物动词"></a>常用及物动词</h2><table>
+<thead>
+<tr>
+<th>原型</th>
+<th>过去式</th>
+<th>过去分词</th>
+<th>现在分词</th>
+<th>第三人称单数格式</th>
+<th>能否用于现在进行时态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bake       烘烤</td>
+<td>baked</td>
+<td>baked</td>
+<td>baking</td>
+<td>bakes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>beat        打</td>
+<td>beat</td>
+<td>beaten</td>
+<td>beating</td>
+<td>beats</td>
+<td>能</td>
+</tr>
+<tr>
+<td>begin      开始</td>
+<td>began</td>
+<td>begun</td>
+<td>beginning</td>
+<td>begins</td>
+<td>否</td>
+</tr>
+<tr>
+<td>believe    相信</td>
+<td>believed</td>
+<td>believed</td>
+<td>believing</td>
+<td>believes</td>
+<td>否</td>
+</tr>
+<tr>
+<td>borrow    借入</td>
+<td>borrowed</td>
+<td>borrowed</td>
+<td>borrowing</td>
+<td>borrows</td>
+<td>否</td>
+</tr>
+<tr>
+<td>break      打破</td>
+<td>broke</td>
+<td>broken</td>
+<td>breaking</td>
+<td>breaks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>bring       带来</td>
+<td>brought</td>
+<td>brought</td>
+<td>bringing</td>
+<td>brings</td>
+<td>能</td>
+</tr>
+<tr>
+<td>brush      刷</td>
+<td>brushed</td>
+<td>brushed</td>
+<td>brushing</td>
+<td>brushes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>buy         买</td>
+<td>bought</td>
+<td>bought</td>
+<td>buying</td>
+<td>buys</td>
+<td>否</td>
+</tr>
+<tr>
+<td>call          打电话</td>
+<td>called</td>
+<td>called</td>
+<td>calling</td>
+<td>calls</td>
+<td>能</td>
+</tr>
+<tr>
+<td>catch      抓住</td>
+<td>caught</td>
+<td>caught</td>
+<td>catching</td>
+<td>catches</td>
+<td>否</td>
+</tr>
+<tr>
+<td>climb       爬</td>
+<td>climbed</td>
+<td>climbed</td>
+<td>climbing</td>
+<td>climbs</td>
+<td>能</td>
+</tr>
+<tr>
+<td>comb      梳理</td>
+<td>combed</td>
+<td>combed</td>
+<td>combing</td>
+<td>combs</td>
+<td>能</td>
+</tr>
+<tr>
+<td>cook       煮</td>
+<td>cooked</td>
+<td>cooked</td>
+<td>cooking</td>
+<td>cooks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>copy       复制</td>
+<td>copied</td>
+<td>copied</td>
+<td>copying</td>
+<td>copies</td>
+<td>能</td>
+</tr>
+<tr>
+<td>correct    改正</td>
+<td>corrected</td>
+<td>corrected</td>
+<td>correcting</td>
+<td>corrects</td>
+<td>能</td>
+</tr>
+<tr>
+<td>cut          剪切</td>
+<td>cut</td>
+<td>cut</td>
+<td>cutting</td>
+<td>cuts</td>
+<td>能</td>
+</tr>
+<tr>
+<td>discuss   讨论</td>
+<td>discussed</td>
+<td>discussed</td>
+<td>discussing</td>
+<td>discusses</td>
+<td>能</td>
+</tr>
+<tr>
+<td>do           做</td>
+<td>did</td>
+<td>done</td>
+<td>doing</td>
+<td>does</td>
+<td>能</td>
+</tr>
+<tr>
+<td>draw        画</td>
+<td>drew</td>
+<td>drawn</td>
+<td>drawing</td>
+<td>draws</td>
+<td>能</td>
+</tr>
+<tr>
+<td>drink        喝</td>
+<td>drank</td>
+<td>drunk</td>
+<td>drinking</td>
+<td>drinks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>drive        驾驶</td>
+<td>drove</td>
+<td>driven</td>
+<td>driving</td>
+<td>drives</td>
+<td>能</td>
+</tr>
+<tr>
+<td>earn         赚</td>
+<td>earned</td>
+<td>earned</td>
+<td>earning</td>
+<td>earns</td>
+<td>能</td>
+</tr>
+<tr>
+<td>eat           吃</td>
+<td>ate</td>
+<td>eaten</td>
+<td>eating</td>
+<td>eats</td>
+<td>能</td>
+</tr>
+<tr>
+<td>find          发现</td>
+<td>found</td>
+<td>found</td>
+<td>finding</td>
+<td>finds</td>
+<td>否</td>
+</tr>
+<tr>
+<td>finish        完成</td>
+<td>finished</td>
+<td>finished</td>
+<td>finishing</td>
+<td>finishes</td>
+<td>否</td>
+</tr>
+<tr>
+<td>follow       跟随</td>
+<td>followed</td>
+<td>followed</td>
+<td>following</td>
+<td>follws</td>
+<td>能</td>
+</tr>
+<tr>
+<td>forget       忘记</td>
+<td>forgot</td>
+<td>forgotten</td>
+<td>forgetting</td>
+<td>forgets</td>
+<td>否</td>
+</tr>
+<tr>
+<td>get           得到</td>
+<td>got</td>
+<td>got/gotten</td>
+<td>getting</td>
+<td>gets</td>
+<td>否</td>
+</tr>
+<tr>
+<td>give          给</td>
+<td>gave</td>
+<td>given</td>
+<td>giving</td>
+<td>gives</td>
+<td>否</td>
+</tr>
+<tr>
+<td>guess       猜测</td>
+<td>guessed</td>
+<td>guessed</td>
+<td>guessing</td>
+<td>guesses</td>
+<td>能</td>
+</tr>
+<tr>
+<td>hate          恨</td>
+<td>hated</td>
+<td>hated</td>
+<td>hating</td>
+<td>gates</td>
+<td>否</td>
+</tr>
+<tr>
+<td>hear          听到</td>
+<td>heard</td>
+<td>heard</td>
+<td>hearing</td>
+<td>heats</td>
+<td>否</td>
+</tr>
+<tr>
+<td>help          帮助</td>
+<td>helped</td>
+<td>helped</td>
+<td>helping</td>
+<td>helps</td>
+<td>能</td>
+</tr>
+<tr>
+<td>hit             打</td>
+<td>hit</td>
+<td>hit</td>
+<td>hitting</td>
+<td>hits</td>
+<td>能</td>
+</tr>
+<tr>
+<td>hold          握住</td>
+<td>held</td>
+<td>held</td>
+<td>holding</td>
+<td>holds</td>
+<td>能</td>
+</tr>
+<tr>
+<td>hurt           伤害</td>
+<td>hurt</td>
+<td>hurt</td>
+<td>hurting</td>
+<td>hurts</td>
+<td>能</td>
+</tr>
+<tr>
+<td>introduce  介绍</td>
+<td>introduced</td>
+<td>introduced</td>
+<td>introducing</td>
+<td>introduces</td>
+<td>能</td>
+</tr>
+<tr>
+<td>invite         邀请</td>
+<td>invited</td>
+<td>invited</td>
+<td>inviting</td>
+<td>invites</td>
+<td>否</td>
+</tr>
+<tr>
+<td>join            加入</td>
+<td>joined</td>
+<td>joined</td>
+<td>joining</td>
+<td>joins</td>
+<td>否</td>
+</tr>
+<tr>
+<td>keep          保持</td>
+<td>kept</td>
+<td>kept</td>
+<td>keeping</td>
+<td>keeps</td>
+<td>能</td>
+</tr>
+<tr>
+<td>kill             杀死</td>
+<td>killed</td>
+<td>killed</td>
+<td>killing</td>
+<td>kills</td>
+<td>否</td>
+</tr>
+<tr>
+<td>knock        敲</td>
+<td>knocked</td>
+<td>knocked</td>
+<td>knocking</td>
+<td>knocks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>know         知道</td>
+<td>knew</td>
+<td>known</td>
+<td>knowing</td>
+<td>knows</td>
+<td>否</td>
+</tr>
+<tr>
+<td>learn         学习</td>
+<td>Learnt/+ed</td>
+<td>Learnt/+ed</td>
+<td>learning</td>
+<td>learns</td>
+<td>能</td>
+</tr>
+<tr>
+<td>leave        离开</td>
+<td>left</td>
+<td>left</td>
+<td>leaving</td>
+<td>leaves</td>
+<td>否</td>
+</tr>
+<tr>
+<td>lend         借出</td>
+<td>lent</td>
+<td>lent</td>
+<td>lending</td>
+<td>lends</td>
+<td>否</td>
+</tr>
+<tr>
+<td>like           喜欢</td>
+<td>liked</td>
+<td>liked</td>
+<td>liking</td>
+<td>likes</td>
+<td>否</td>
+</tr>
+<tr>
+<td>lock          锁</td>
+<td>locked</td>
+<td>locked</td>
+<td>locking</td>
+<td>locks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>lose          丢失</td>
+<td>lost</td>
+<td>lost</td>
+<td>losing</td>
+<td>loses</td>
+<td>否</td>
+</tr>
+<tr>
+<td>love          爱</td>
+<td>loved</td>
+<td>loved</td>
+<td>loving</td>
+<td>loves</td>
+<td>否</td>
+</tr>
+<tr>
+<td>make        制造</td>
+<td>made</td>
+<td>made</td>
+<td>making</td>
+<td>makes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>need        需要</td>
+<td>needed</td>
+<td>needed</td>
+<td>needing</td>
+<td>needs</td>
+<td>否</td>
+</tr>
+<tr>
+<td>meet        遇见</td>
+<td>met</td>
+<td>met</td>
+<td>meeting</td>
+<td>meets</td>
+<td>否</td>
+</tr>
+<tr>
+<td>miss         思念</td>
+<td>missed</td>
+<td>missed</td>
+<td>missing</td>
+<td>misses</td>
+<td>能</td>
+</tr>
+<tr>
+<td>move        移动</td>
+<td>moved</td>
+<td>moved</td>
+<td>moving</td>
+<td>moves</td>
+<td>能</td>
+</tr>
+<tr>
+<td>marry        嫁</td>
+<td>married</td>
+<td>married</td>
+<td>marrying</td>
+<td>marries</td>
+<td>否</td>
+</tr>
+<tr>
+<td>open        打开</td>
+<td>opened</td>
+<td>opened</td>
+<td>opening</td>
+<td>opens</td>
+<td>能</td>
+</tr>
+<tr>
+<td>own         拥有</td>
+<td>owned</td>
+<td>owned</td>
+<td>owning</td>
+<td>owns</td>
+<td>否</td>
+</tr>
+<tr>
+<td>pay         支付</td>
+<td>paid</td>
+<td>paid</td>
+<td>paying</td>
+<td>pays</td>
+<td>能</td>
+</tr>
+<tr>
+<td>pass       通过</td>
+<td>passed</td>
+<td>passed</td>
+<td>passing</td>
+<td>passes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>pick        捡</td>
+<td>picked</td>
+<td>picked</td>
+<td>picking</td>
+<td>picks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>refuse     拒绝</td>
+<td>refused</td>
+<td>refused</td>
+<td>refusing</td>
+<td>refuses</td>
+<td>否</td>
+</tr>
+<tr>
+<td>punish     惩罚</td>
+<td>punished</td>
+<td>punished</td>
+<td>punishing</td>
+<td>punishes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>put          放</td>
+<td>put</td>
+<td>put</td>
+<td>putting</td>
+<td>puts</td>
+<td>能</td>
+</tr>
+<tr>
+<td>push       推</td>
+<td>pushed</td>
+<td>pushed</td>
+<td>pushing</td>
+<td>pushes</td>
+<td>能</td>
+</tr>
+<tr>
+<td>speak      说</td>
+<td>spoke</td>
+<td>spoken</td>
+<td>speaking</td>
+<td>speaks</td>
+<td>能</td>
+</tr>
+<tr>
+<td>support   支持</td>
+<td>supported</td>
+<td>supported</td>
+<td>supporting</td>
+<td>supports</td>
+<td>能</td>
+</tr>
+<tr>
+<td>start        开始</td>
+<td>started</td>
+<td>started</td>
+<td>starting</td>
+<td>starts</td>
+<td>能</td>
+</tr>
+<tr>
+<td>study      学习</td>
+<td>studied</td>
+<td>studied</td>
+<td>studying</td>
+<td>studies</td>
+<td>能</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+  <entry>
+    <title>Documentation</title>
+    <url>/docs/english-grammar/index.html</url>
+    <content><![CDATA[<p>English Grammar Docs<br>英语语法文档</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>名词</title>
+    <url>/docs/english-grammar/noun.html</url>
+    <content><![CDATA[<h3 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h3><p>名词：世间万物的名称。</p>
+<h4 id="名词分类："><a href="#名词分类：" class="headerlink" title="名词分类："></a>名词分类：</h4><ol>
+<li>普通名词：<ul>
+<li>可数名词<ul>
+<li>单数格式</li>
+<li>复数格式</li>
+</ul>
+</li>
+<li>不可数名词</li>
+</ul>
+</li>
+<li>专有名词</li>
+</ol>
+<h4 id="可数名词单数变复数的规律："><a href="#可数名词单数变复数的规律：" class="headerlink" title="可数名词单数变复数的规律："></a>可数名词单数变复数的规律：</h4><ol>
+<li>有规律：</li>
+</ol>
+<ul>
+<li>（名词）+ s<ul>
+<li>特例：stomach 变为 stomachs</li>
+</ul>
+</li>
+<li>（结尾是字母 s，sh，x， ch ）+ es</li>
+<li>（结尾是辅音字母 + y，去 y 变 i ）+ es</li>
+<li>（结尾是元音字母 + y ）+ s</li>
+<li>（结尾是 f 或 fe ，去 f 或 fe 变 v ）+ es</li>
+<li>（结尾是辅音字母 + o ）+ es</li>
+<li>（结尾是元音字母 + o 或以 o 结尾）+ s</li>
+</ul>
+<ol start="2">
+<li>无规律变化：</li>
+</ol>
+<ul>
+<li>少数不规则的变化。</li>
+<li>单复数相同。</li>
+<li>只有复数形式，没有单数形式。</li>
+</ul>
+<h4 id="不可数名词："><a href="#不可数名词：" class="headerlink" title="不可数名词："></a>不可数名词：</h4><p>只有单数形式，没有复数形式（使用量词表达不可数名词的复数）。</p>
+<p><strong>量词：</strong></p>
+<ul>
+<li>量词的格式：<ul>
+<li>A/an/one + 可数名词单数 + of</li>
+<li>数词 + 可数名词的复数 + of</li>
+<li>量词里的 of 没有意思。</li>
+<li>量词可以修饰可数名词的复数，但不能修饰单数。</li>
+</ul>
+</li>
+<li>量词的注意点：<ul>
+<li>不是所有可数名词都能构成量词。<br>有内部空间<br>容器<br>符合逻辑</li>
+<li>大部分量词都是修饰不可数名词。使用量词要注意英文思维逻辑。</li>
+<li>量词不能修饰可数名词的单数。</li>
+<li>量词可以修饰可数名词的复数，但不常见，要求非常严格（必须是可数的事物装到容器里面或装到有空间的事物里面，同时主意 英文思维逻辑）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="名词的作用"><a href="#名词的作用" class="headerlink" title="名词的作用"></a>名词的作用</h4><ol>
+<li><p>作主语</p>
+</li>
+<li><p>作表语</p>
+</li>
+<li><p>作宾语</p>
+</li>
+<li><p>作宾补</p>
+</li>
+<li><p>作定语<br> 名词作定语的情况不多，符合的情况下可以理解为一个复合名词。<br> 复合名词：前面的名词 + 后面的名词。<br> ⚠️注意：</p>
+<ul>
+<li>可数不可数取决于后面的名词。</li>
+<li>前面的名词如果是可数的，不能变为复数，要使用单数形式。</li>
+<li>复合名词不是任意组成的。</li>
+</ul>
+</li>
+<li><p>作介词短语<br> 名词可以放在介词的后面，构成一个介词短语。</p>
+</li>
+<li><p>作同位语</p>
+</li>
+</ol>
+<h4 id="名词所有格"><a href="#名词所有格" class="headerlink" title="名词所有格"></a>名词所有格</h4><p>名词所有格的两种构成方式：</p>
+<ol>
+<li><p>有生命的名词（人或动物）+ ‘s</p>
+<ul>
+<li>如果是人名直接 + ‘s</li>
+<li>如果是普通名词，要注意：可数名词单数不能单独使用。</li>
+<li>如果是专有名词，第一个需要大写。如果小写要注意单复数，不能单数单独使用。</li>
+</ul>
+<p>名词所有格一般作前置定语，修饰名词。可以修饰可数名词或不可数名词，可以修饰单数或复数。</p>
+</li>
+<li><p>无生命的名词用 “ of + 无生命的名词 ”。</p>
+</li>
+</ol>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+  </entry>
+  <entry>
+    <title>句子的成分</title>
+    <url>/docs/english-grammar/sentence-elemen.html</url>
+    <content><![CDATA[<h3 id="句子的要素"><a href="#句子的要素" class="headerlink" title="句子的要素"></a>句子的要素</h3><p>  造句的两个条件：<br>  1 一个句子的组成要素：<br>      主语，谓语，宾语，表语，补语，定语，状语，不常用的定位语。<br>  2 组成成份的位置和顺序。</p>
+<h4 id="主语："><a href="#主语：" class="headerlink" title="主语："></a>主语：</h4><p>  主语是一个句子叙述的主体。<br>      可以作为主语的词：名词·代词·数词·动词不定式·动名词·句子·其它。<br>      不可以作主语的词：谓语动词，形容词，介词，副词等。</p>
+<p>  1 名词<br>      名词就是世间万物的名称。<br>      名词都可以作为主语。</p>
+<p>  2 代词<br>    代词就是为了避免重复而代替名词的词语。<br>    绝大多数代词可以作为主语（ 人称代词的主格可以作为主语，宾格不能作为主语）。</p>
+<p>  3 数词<br>     数词有基数词（1，2，3…）和序数词（第一，第二，第三…）。<br>    不管基数词还是叙述词都可以作为主语。</p>
+<p>  4 动词不定式或短语<br>    动词不定式和动名词统称：非谓语动词。<br>    表示动作的词语作主语时，要变成非谓语形式，也就是动词不定式或者动名词</p>
+<p>  5 句子<br>     作为主语的句子叫做主语从句。</p>
+<p>  6 其它<br>     有些词语看起来不是名词，但具有名词的含义，可以作主语。</p>
+<h4 id="谓语"><a href="#谓语" class="headerlink" title="谓语"></a>谓语</h4><p>  谓语定义：说明主语的动作或者状态的词语。<br>  谓语有动作型谓语和状态型谓语两种：动作性谓语和状态型谓语。</p>
+<p>  动作型谓语：由动词构成的，动词就是表示动作或心理行为的词语。<br>  动作型谓语又分为简单谓语和复合谓语。<br>    简单谓语：实义动词或动词短语构成。<br>      实义动词（有实际意义的动词）。<br>      动词短语由动词和一个单词或几个单词构成的词组。因为几个词共同表示一个动作，所以动词短语也称为复合动词。<br>    复合谓语<br>      复合谓语：简单谓语加上其它词语，共同作为谓语。<br>      三种表示形式：<br>      情态动词 + 动词原形（实义动词或动词短语原型）<br>      助动动词 + 动词原形（实义动词或动词短语原型）<br>      情态动词 + 动词的其他格式实义动词（be + doing 或 Have/has + done）</p>
+<p>  状态型谓语：由系动词 + 表语构成。<br>    系动词 + 表语也是一种复合谓语。</p>
+<h4 id="表语"><a href="#表语" class="headerlink" title="表语"></a>表语</h4><p>  表语属于谓语的范畴，但不是谓语，系动词 + 表语才是谓语。系表结构不能分开，两者同时存在。<br>  可以做表语的词：名词，形容词，介词短语，名词所有格，动词不定式，动名词，代词，数词，分词，副词，句子都可以作表语。</p>
+<h4 id="宾语"><a href="#宾语" class="headerlink" title="宾语"></a>宾语</h4><p>  宾语：动作的对象或者承受者。实义动词分为及物动词和不及物动词。</p>
+<p>  及物动词后面一定要跟一个动作的对象或者承受者（宾语）。</p>
+<p>  有些及物动词后面可以跟两个宾语：并列宾语或双宾（直接宾语，间接宾语）。<br>  直接宾语：一人一物。</p>
+<p>  能带两个宾语的及物动词称为双宾动词。</p>
+<p>  能作主语（名词·代词·数词·动词不定式·动名词·句子·其它）的词语都可以作宾语。<br>  两处不同之处：<br>    1 代词：可以作主语，也可以作宾语。人称代词主格，只能作主语，人称代词宾格只能作宾语。<br>    2 句子：可以作主语，也可以作宾语。名称不一样，句子作主语叫主语从句，句子作宾语叫宾语从句。<br>  其它能作宾语的词语：动词不定式，动名词，句子等。<br>  不能作主语的词语，也不能做定语。</p>
+<h4 id="宾语补足语（宾补）"><a href="#宾语补足语（宾补）" class="headerlink" title="宾语补足语（宾补）"></a>宾语补足语（宾补）</h4><p>  特定的及物动词加上宾语后意思还是不完整，需要加上一个词语补充宾语，使句子意思完整。这个补充宾语的词语叫做宾补。</p>
+<p>  宾补只跟宾语有关系。</p>
+<p>  能作宾补的词语：形容词，名词，数词，动词不定式，动名词，副词，分词，介词短语，句子。<br>    形容词<br>      主语 + 特定的及物动词 + 宾语 + 宾补<br>      主语 + make/keep + 宾语 + 形容词<br>    名词<br>      主语 + make/call + 宾语 + 名词（宾补）<br>      主语 + make/call + 宾语 + 名词（宾语）<br>      名词作宾补的时候容易跟双宾混淆。<br>        宾补：宾语 + 名词都表示同一人或同一事物<br>        双宾：宾语 + 名词都表示<u>一人一物</u><br>    数词<br>    动词不定式<br>    动名词<br>    副词<br>    分词<br>    介词短语<br>    句子</p>
+<h4 id="状语"><a href="#状语" class="headerlink" title="状语"></a>状语</h4><p>状语是一个很重要的句子成分。</p>
+<p>状语：说明谓语的情况，状语只跟谓语有关系。</p>
+<p>状语一般放在句子的后面。</p>
+<p>状语种类：时间状语，地点状语，方式状语，原因状语，目的状语等等。</p>
+<p>状语一般由副词，介词短语充当。</p>
+<p>地点状语可以修饰动作性谓语（主语 + 系动词 + 表语 + 状语），也可以修饰状态型谓语。</p>
+<p>时间副词可以作时间状语。<br>方式副词可以作方式状语。<br>频度副词可以做时间状语。</p>
+<p>一句英文句子中，可以同时出现多个状语。</p>
+<h4 id="定语"><a href="#定语" class="headerlink" title="定语"></a>定语</h4><p>定语：修饰或限定名词的词语。名词都是需要定语（共同存在，特殊情况带）。修饰不定代词的词语也叫定语（放不定代词后面，属于后置定语），<br>  普通名词才能带定语，专有名词不能带定语（特殊情况带）。</p>
+<p>定语分为：前置定语（定语在名词前面）和后置定语（定语在名词后面）。<br>  可以作前置定语：形容词性物主代词，形容词，名词所有格（`s），数词，名词，量词，指示代词等等。<br>  同一个普通名词可以跟多个定语。<br>  后置定语构成：介词短语，名词所有格（of + 名词），动名词短语，动词不定式短语，句子构成。</p>
+<h4 id="同位语"><a href="#同位语" class="headerlink" title="同位语"></a>同位语</h4><p>同位语：两个不同的词语都表示同一个人或事物。起强调补充作用。</p>
+<h4 id="五个基本句型"><a href="#五个基本句型" class="headerlink" title="五个基本句型"></a>五个基本句型</h4><p>表示状态：状态型句子（主语 + be（系动词）+ 表语 + 状语）<br>  主语 + be（系动词）+ 表语 + 状语 </p>
+<p>表示动作：动作型句子（主语 + 谓语（实义动词） + 宾语 + 状语）<br>  主语 + 谓语（不及物动词）+ 状语<br>  主语 + 谓语（及物动词）+ 宾语 + 状语<br>  主语 + 谓语（及物动词里面的双宾动词）+ 双宾语 + 状语<br>  主语 + 谓语（少数特定的及物动词）+ 宾语 + 宾补 + 状语</p>
+]]></content>
+  </entry>
 </search>
