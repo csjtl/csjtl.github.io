@@ -3840,70 +3840,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>句成分单词分类</title>
-    <url>/docs/english-grammar/classification.html</url>
-    <content><![CDATA[<h4 id="句成分单词分类"><a href="#句成分单词分类" class="headerlink" title="句成分单词分类"></a>句成分单词分类</h4><table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="left">可以</th>
-<th align="left">不可以</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">主语</td>
-<td align="left">名词，代词，数词，动词不定式，动名词，句子，其它</td>
-<td align="left">谓语动词，形容词，介词，副词</td>
-</tr>
-<tr>
-<td align="center">谓语</td>
-<td align="left">动作性谓语：动词<br>状态型谓语：系表结构</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">表语</td>
-<td align="left">名词，形容词，介词短语，名词所有格，动词不定式，动名词，代词，数词，分词，副词，句子</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">宾语</td>
-<td align="left">名词，代词（人称代词宾格），数词，动词不定式，动名词，句子（主语从句，宾语从句），其它</td>
-<td align="left">人称代词主格</td>
-</tr>
-<tr>
-<td align="center">宾补</td>
-<td align="left">形容词，名词，数词，动词不定式，动名词，副词，分词，介词短语，句子</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">状语</td>
-<td align="left">副词，介词短语</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">定语</td>
-<td align="left">前置定语：形容词性物主代词，形容词，名词所有格（‘s），数词，名词，量词，指示代词。<br/>后置定语：介词短语，名词所有格（of），动名词短语，动词不定式短语，句子。</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">同位语</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-]]></content>
-  </entry>
-  <entry>
     <title>名词</title>
     <url>/docs/english-grammar/noun.html</url>
     <content><![CDATA[<h3 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h3><p>名词：世间万物的名称。</p>
@@ -4152,5 +4088,104 @@
 <li>同位语：两个不同的词语都表示同一个人或事物。起强调补充作用。</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>形容词</title>
+    <url>/docs/english-grammar/adjective.html</url>
+    <content><![CDATA[<h3 id="形容词（adj-）"><a href="#形容词（adj-）" class="headerlink" title="形容词（adj.）"></a>形容词（adj.）</h3>]]></content>
+  </entry>
+  <entry>
+    <title>副词</title>
+    <url>/docs/english-grammar/adverb.html</url>
+    <content><![CDATA[<h3 id="副词（adv-）"><a href="#副词（adv-）" class="headerlink" title="副词（adv.）"></a>副词（adv.）</h3>]]></content>
+  </entry>
+  <entry>
+    <title>句成分单词分类</title>
+    <url>/docs/english-grammar/appendices-classification.html</url>
+    <content><![CDATA[<h4 id="句成分单词分类"><a href="#句成分单词分类" class="headerlink" title="句成分单词分类"></a>句成分单词分类</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">可以</th>
+<th align="left">不可以</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">主语</td>
+<td align="left">名词，代词，数词，动词不定式，动名词，句子，其它</td>
+<td align="left">谓语动词，形容词，介词，副词</td>
+</tr>
+<tr>
+<td align="center">谓语</td>
+<td align="left">动作性谓语：动词<br>状态型谓语：系表结构</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">表语</td>
+<td align="left">名词，形容词，介词短语，名词所有格，动词不定式，动名词，代词，数词，分词，副词，句子</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">宾语</td>
+<td align="left">名词，代词（人称代词宾格），数词，动词不定式，动名词，句子（主语从句，宾语从句），其它</td>
+<td align="left">人称代词主格</td>
+</tr>
+<tr>
+<td align="center">宾补</td>
+<td align="left">形容词，名词，数词，动词不定式，动名词，副词，分词，介词短语，句子</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">状语</td>
+<td align="left">副词，介词短语</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">定语</td>
+<td align="left">前置定语：形容词性物主代词，形容词，名词所有格（‘s），数词，名词，量词，指示代词。<br/>后置定语：介词短语，名词所有格（of），动名词短语，动词不定式短语，句子。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">同位语</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+  <entry>
+    <title>冠词</title>
+    <url>/docs/english-grammar/article.html</url>
+    <content><![CDATA[<h3 id="冠词（art-）"><a href="#冠词（art-）" class="headerlink" title="冠词（art.）"></a>冠词（art.）</h3>]]></content>
+  </entry>
+  <entry>
+    <title>情态动词</title>
+    <url>/docs/english-grammar/modal-verb.html</url>
+    <content><![CDATA[<h3 id="情态动词"><a href="#情态动词" class="headerlink" title="情态动词"></a>情态动词</h3>]]></content>
+  </entry>
+  <entry>
+    <title>介词</title>
+    <url>/docs/english-grammar/preposition.html</url>
+    <content><![CDATA[<h3 id="介词"><a href="#介词" class="headerlink" title="介词"></a>介词</h3>]]></content>
+  </entry>
+  <entry>
+    <title>代词</title>
+    <url>/docs/english-grammar/pronoun.html</url>
+    <content><![CDATA[<h3 id="代词（pron-）"><a href="#代词（pron-）" class="headerlink" title="代词（pron.）"></a>代词（pron.）</h3>]]></content>
+  </entry>
+  <entry>
+    <title>动词</title>
+    <url>/docs/english-grammar/verb.html</url>
+    <content><![CDATA[<h3 id="动词（v-）"><a href="#动词（v-）" class="headerlink" title="动词（v.）"></a>动词（v.）</h3>]]></content>
   </entry>
 </search>
