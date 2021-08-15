@@ -3012,7 +3012,7 @@
   <entry>
     <title>Documentation</title>
     <url>/docs/index.html</url>
-    <content><![CDATA[<p>English Grammar Docs<br>英语语法文档</p>
+    <content><![CDATA[<p>English Grammar Docs<br>英语语法文档<br>学习笔记</p>
 ]]></content>
   </entry>
   <entry>
@@ -3840,9 +3840,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>名词</title>
+    <title>名词（n.）</title>
     <url>/docs/english-grammar/noun.html</url>
-    <content><![CDATA[<h3 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h3><p>名词：世间万物的名称。</p>
+    <content><![CDATA[<h3 id="名词（n-）"><a href="#名词（n-）" class="headerlink" title="名词（n.）"></a>名词（n.）</h3><p>名词：世间万物的名称。</p>
 <h4 id="名词分类："><a href="#名词分类：" class="headerlink" title="名词分类："></a>名词分类：</h4><ol>
 <li>普通名词：<ul>
 <li>可数名词<ul>
@@ -4179,7 +4179,7 @@
     <content><![CDATA[<h3 id="介词"><a href="#介词" class="headerlink" title="介词"></a>介词</h3>]]></content>
   </entry>
   <entry>
-    <title>代词</title>
+    <title>代词（pron.）</title>
     <url>/docs/english-grammar/pronoun.html</url>
     <content><![CDATA[<h3 id="代词（pron-）"><a href="#代词（pron-）" class="headerlink" title="代词（pron.）"></a>代词（pron.）</h3>]]></content>
   </entry>
