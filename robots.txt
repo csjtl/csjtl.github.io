@@ -11,3 +11,4 @@ Disallow: /css/
 Disallow: /mynote/
 
 Sitemap: http://tl8517.com/sitemap.xml
+Sitemap: https://tl8517.com/sitemap.xml
