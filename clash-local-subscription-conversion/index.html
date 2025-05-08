@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Img/site/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Img/site/favicon-32x32.webp">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Img/site/favicon-16x16.webp">
+  <link rel="mask-icon" href="/Img/site/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/Img/site.webmanifest">
+  <meta name="google-site-verification" content="fvwjkFuau0tORJ5I7dA2uBmezPpxGd9nadluTdygs-w">
+  <meta name="yandex-verification" content="90b58abcb217f0c8">
+  <meta name="baidu-site-verification" content="code-bVjVqeMI5c">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="/lib/@fortawesome/fontawesome-free/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/lib/animate.css/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tl8517.com","root":"/","images":"/assets","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本地 clash 订阅转换，自定义适合自己的规则。（待更新)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 subconverter 本地节点转换（openclash 自定义规则）">
+<meta property="og:url" content="https://tl8517.com/clash-local-subscription-conversion/">
+<meta property="og:site_name" content="Focus">
+<meta property="og:description" content="本地 clash 订阅转换，自定义适合自己的规则。（待更新)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/205300.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203204.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203110.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203250.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203842.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203312.webp">
+<meta property="og:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/203714.webp">
+<meta property="article:published_time" content="2024-06-30T13:35:29.000Z">
+<meta property="article:modified_time" content="2024-10-21T03:34:18.000Z">
+<meta property="article:author" content="csjtl">
+<meta property="article:tag" content="捣鼓单车">
+<meta property="article:tag" content="聚焦单车工作室">
+<meta property="article:tag" content="3d建模">
+<meta property="article:tag" content="3d打印">
+<meta property="article:tag" content="clash">
+<meta property="article:tag" content="openclash">
+<meta property="article:tag" content="subconverter">
+<meta property="article:tag" content="local">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tl8517.com/assets/clash-local-subscription-conversion/205300.webp">
+
+
+<link rel="canonical" href="https://tl8517.com/clash-local-subscription-conversion/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://tl8517.com/clash-local-subscription-conversion/","path":"clash-local-subscription-conversion/","title":"使用 subconverter 本地节点转换（openclash 自定义规则）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用 subconverter 本地节点转换（openclash 自定义规则） | Focus</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MRCBCJ8ZQ"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-0MRCBCJ8ZQ","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+<script data-ad-client="ca-pub-7562598542957769" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Focus</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">聚焦</p>
+      <img class="custom-logo-image" src="/Img/site/Site-Avatar.webp" alt="Focus">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">33</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subconverter%E4%B8%8B%E8%BD%BD"><span class="nav-text">subconverter下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99%E5%88%97%E8%A1%A8"><span class="nav-text">规则列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0"><span class="nav-text">文件描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%99%E4%B8%8B%E8%BD%BD%E7%9B%AE%E5%BD%95"><span class="nav-text">规则下载目录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5"><span class="nav-text">订阅链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E7%BB%84%EF%BC%8C%E8%A7%84%E5%88%99%E7%BB%84"><span class="nav-text">代理组，规则组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%90%86%E7%BB%84"><span class="nav-text">代理组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%99%E7%BB%84"><span class="nav-text">规则组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E6%88%96%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5"><span class="nav-text">视频或文章链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-text">文件下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q%E7%BE%A4%EF%BC%9A290979342-%E8%81%9A%E7%84%A6%E5%8D%95%E8%BD%A6%E4%BA%A4%E6%B5%81%E7%BE%A4"><span class="nav-text">Q群：290979342(聚焦单车交流群)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="csjtl"
+      src="/Img/user/Sidebar-Avatar.gif">
+  <p class="site-author-name" itemprop="name">csjtl</p>
+  <div class="site-description" itemprop="description">她无处不在</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">105</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">245</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/csjtl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;csjtl" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tl8517@gmail.com" title="E-Mail → mailto:tl8517@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/19763939" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;19763939" rel="noopener me" target="_blank"><i class="fa-brands fa-bilibili fa-fw"></i>BiliBili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://makerworld.com/zh/@csjtl" title="MakerWorld → https:&#x2F;&#x2F;makerworld.com&#x2F;zh&#x2F;@csjtl" rel="noopener me" target="_blank"><i class="fa-solid fa-cube fa-fw"></i>MakerWorld</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/lib/@creativecommons/vocabulary/assets/license_badges/big/by_nc_nd.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://tl8517.com/" title="https:&#x2F;&#x2F;tl8517.com">Title</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/clash-local-subscription-conversion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/user/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+      <meta itemprop="description" content="她无处不在">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="使用 subconverter 本地节点转换（openclash 自定义规则） | Focus">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用 subconverter 本地节点转换（openclash 自定义规则）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-30 21:35:29" itemprop="dateCreated datePublished" datetime="2024-06-30T21:35:29+08:00">2024-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 11:34:18" itemprop="dateModified" datetime="2024-10-21T11:34:18+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/" itemprop="url" rel="index"><span itemprop="name">embedded system</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-system/openwrt/" itemprop="url" rel="index"><span itemprop="name">openwrt</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img src="/../assets/clash-local-subscription-conversion/205300.webp" alt="导图"><br>本地 clash 订阅转换，自定义适合自己的规则。（待更新)</p>
+<span id="more"></span>
+
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="subconverter下载"><a href="#subconverter下载" class="headerlink" title="subconverter下载"></a>subconverter下载</h3><p>文末有源文件下载和我修改后的，修改的只需要把clash订阅地址填入就可用。<br>在 Ubuntu 系统下执行<code>./0.sh</code> 即可。</p>
+<h3 id="规则列表"><a href="#规则列表" class="headerlink" title="规则列表"></a>规则列表</h3><h4 id="文件描述"><a href="#文件描述" class="headerlink" title="文件描述"></a>文件描述</h4><p>下面只是文件夹内需要更改或使用的文件及文件夹</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">├── 0.sh</span><br><span class="line">├── clash-rules.yml</span><br><span class="line">├── clash.conf</span><br><span class="line">├── generate.ini</span><br><span class="line">├── rules</span><br><span class="line">│   └── custom</span><br><span class="line">│       ├── 1Unbreak</span><br><span class="line">│       │   ├── Unbreak.list</span><br><span class="line">│       │   └── ssrsub.list</span><br><span class="line">│       ├── 2AdRules</span><br><span class="line">│       │   ├── AdRules.list</span><br><span class="line">│       │   └── ssrsub.list</span><br><span class="line">│       ├── 3ProxyGFW</span><br><span class="line">│       │   ├── ProxyGFW.list</span><br><span class="line">│       │   └── ssrsub.list</span><br><span class="line">│       ├── 4MicrosoftApple</span><br><span class="line">│       │   ├── Microsoft.list</span><br><span class="line">│       │   └── ssrsub.list</span><br><span class="line">│       ├── 5GithubDocker</span><br><span class="line">│       │   ├── Docker.list</span><br><span class="line">│       │   └── Github.list</span><br><span class="line">│       ├── 6Google</span><br><span class="line">│       │   └── Google.list</span><br><span class="line">│       ├── 7Streaming</span><br><span class="line">│       │   ├── Streaming.list</span><br><span class="line">│       │   └── ssrsub.list</span><br><span class="line">│       └── 8Telegram</span><br><span class="line">│           └── Telegram.list</span><br><span class="line">├── setup.log</span><br><span class="line">├── snippets</span><br><span class="line">│   ├── groups.toml</span><br><span class="line">│   ├── groups.txt</span><br><span class="line">│   ├── rulesets.toml</span><br><span class="line">│   ├── rulesets.txt</span><br><span class="line">└── subconverter</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="规则下载目录"><a href="#规则下载目录" class="headerlink" title="规则下载目录"></a>规则下载目录</h4><p>执行<code>0.sh</code>获取自定义的规则列表，然后执行<code>subconverter</code>。<br>文件中可以添加其它资源规则，要注意资源的格式，我添加的是需要脚本处理一下的。对于直接是 .list 的文件应该使用<code>rulesets_remote.txt</code>就可以，我没有用到。<br>下载好的 list 文件都放在 rules&#x2F;custom 文件夹。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203204.webp" alt="list文件"></p>
+<h3 id="订阅链接"><a href="#订阅链接" class="headerlink" title="订阅链接"></a>订阅链接</h3><p>generate.ini 该文件只需要填入<code>url</code>的参数，就是 clash 的订阅地址。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203110.webp" alt="generate.ini文件"></p>
+<h3 id="代理组，规则组"><a href="#代理组，规则组" class="headerlink" title="代理组，规则组"></a>代理组，规则组</h3><h4 id="代理组"><a href="#代理组" class="headerlink" title="代理组"></a>代理组</h4><p>snippets&#x2F;groups.toml<br>snippets&#x2F;groups.txt<br>groups 文件是定义各种类型需要使用哪种代理</p>
+<p>groups.toml 文件内容，程序执行时会用到。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203250.webp" alt="groups.toml文件"></p>
+<p>groups.txt 文件内容。不会用到，但是可以作为预览在填写 groups.toml 文件。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203842.webp" alt="groups.txt文件"></p>
+<h4 id="规则组"><a href="#规则组" class="headerlink" title="规则组"></a>规则组</h4><p>snippets&#x2F;rulesets.toml<br>snippets&#x2F;rulesets.txt<br>rulesets 文件是定义各种类型需要使用的规则，前面下载整理好的（custom文件夹）</p>
+<p>rulesets.toml 文件内容，程序执行时会用到。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203312.webp" alt="rulesets.toml文件"></p>
+<p>rulesets.txt 文件内容。不会用到，但是可以作为预览在填写 rulesets.toml 文件。<br>规则排序问题：<br>客户端需要使用哪种规则是安装文件依次执行的，前后都有相同规则，后面的不执行。所以像下载等需要直连的就放在首位，其它就看个人喜好了。</p>
+<p><img src="/../assets/clash-local-subscription-conversion/203714.webp" alt="rulesets.txt文件"></p>
+<h2 id="视频或文章链接"><a href="#视频或文章链接" class="headerlink" title="视频或文章链接"></a>视频或文章链接</h2><p><a href="https://tl8517.com/openwrt-online-diy/">OpenWrt在线编译（官方网址）及自定义（openclash，设备名，密码等等）</a></p>
+<p><a href="https://tl8517.com/openwrt-default-config/">openwrt 默认配置编译（密码 语言 IP））</a></p>
+<p>自用的节点商，对于非常高清的视频没有需求可以试试，关键便宜，一个月十几块。<br><a target="_blank" rel="noopener" href="https://shandianpro.com/#/register?code=XeRqKeJ0">闪电</a></p>
+<h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p><a href="../assets/clash-local-subscription-conversion/subconverter.rar">已修改subconverter.rar</a><br><a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz">subconverter源文件下载</a></p>
+<h2 id="Q群：290979342-聚焦单车交流群"><a href="#Q群：290979342-聚焦单车交流群" class="headerlink" title="Q群：290979342(聚焦单车交流群)"></a>Q群：290979342(聚焦单车交流群)</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/Img/pay/wechatpay.webp" alt="csjtl 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/Img/pay/alipay.webp" alt="csjtl 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>聚焦单车
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tl8517.com/clash-local-subscription-conversion/" title="使用 subconverter 本地节点转换（openclash 自定义规则）">https://tl8517.com/clash-local-subscription-conversion/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8D%A3%E9%BC%93%E5%8D%95%E8%BD%A6/" rel="tag"># 捣鼓单车</a>
+              <a href="/tags/%E8%81%9A%E7%84%A6%E5%8D%95%E8%BD%A6%E5%B7%A5%E4%BD%9C%E5%AE%A4/" rel="tag"># 聚焦单车工作室</a>
+              <a href="/tags/3d%E5%BB%BA%E6%A8%A1/" rel="tag"># 3d建模</a>
+              <a href="/tags/3d%E6%89%93%E5%8D%B0/" rel="tag"># 3d打印</a>
+              <a href="/tags/clash/" rel="tag"># clash</a>
+              <a href="/tags/openclash/" rel="tag"># openclash</a>
+              <a href="/tags/subconverter/" rel="tag"># subconverter</a>
+              <a href="/tags/local/" rel="tag"># local</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wsl-openwrt-err/" rel="prev" title="wsl-openwrt-err">
+                  <i class="fa fa-angle-left"></i> wsl-openwrt-err
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/openwrt-rax3000m/" rel="next" title="RAX3000M 修改配置文件，刷 u-boot 及 openwrt 固件">
+                  RAX3000M 修改配置文件，刷 u-boot 及 openwrt 固件 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fas fa-heart-broken"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">csjtl</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="/lib/animejs/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="/lib/hexo-generator-searchdb/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+</body>
+</html>

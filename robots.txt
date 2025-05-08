@@ -1,0 +1,19 @@
+User-Agent: Baiduspider
+Disallow: /tags/
+Disallow: /tag/
+Disallow: /tl8517/
+Disallow: /keywords/
+Disallow: /search/
+Disallow: /comment/
+Disallow: /*?*
+Disallow: /?*
+Disallow: /mynote
+
+User-Agent: *
+Disallow: /tl8517/
+Disallow: /keywords/
+Disallow: /search/
+Disallow: /comment/
+Disallow: /*?*
+Disallow: /?*
+Disallow: /mynote

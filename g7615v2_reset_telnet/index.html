@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Img/site/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Img/site/favicon-32x32.webp">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Img/site/favicon-16x16.webp">
+  <link rel="mask-icon" href="/Img/site/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/Img/site.webmanifest">
+  <meta name="google-site-verification" content="fvwjkFuau0tORJ5I7dA2uBmezPpxGd9nadluTdygs-w">
+  <meta name="yandex-verification" content="90b58abcb217f0c8">
+  <meta name="baidu-site-verification" content="code-bVjVqeMI5c">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="/lib/@fortawesome/fontawesome-free/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/lib/animate.css/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tl8517.com","root":"/","images":"/assets","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="适用于济南联通新装光猫 G7615V2生产日期：2024&#x2F;10固件：V3.0.5P24T7 完全恢复出厂设置（reset 键）断掉上行光，插电开机，等到除电源外的任意灯亮（默认红灯亮，也就是光信号灯。如果上行方式改为网口1-4其中一个，就是网口的指示灯）时按下 reset 键直到 led 灯全亮并熄灭，复位完成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用">
+<meta property="og:url" content="https://tl8517.com/g7615v2_reset_telnet/">
+<meta property="og:site_name" content="Focus">
+<meta property="og:description" content="适用于济南联通新装光猫 G7615V2生产日期：2024&#x2F;10固件：V3.0.5P24T7 完全恢复出厂设置（reset 键）断掉上行光，插电开机，等到除电源外的任意灯亮（默认红灯亮，也就是光信号灯。如果上行方式改为网口1-4其中一个，就是网口的指示灯）时按下 reset 键直到 led 灯全亮并熄灭，复位完成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-0623035.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/cmd.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-02-16-48-53-550.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-02-16-49-02-515.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-002105.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-002329.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-005025.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003901.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-010037.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-010228.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003059.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003145.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003236.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003340.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-004611.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003704.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003535.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003609.webp">
+<meta property="og:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-05-003639.webp">
+<meta property="article:published_time" content="2025-05-03T07:26:17.000Z">
+<meta property="article:modified_time" content="2025-05-08T12:05:31.351Z">
+<meta property="article:author" content="csjtl">
+<meta property="article:tag" content="捣鼓单车">
+<meta property="article:tag" content="聚焦单车工作室">
+<meta property="article:tag" content="G7615V2">
+<meta property="article:tag" content="u-boot">
+<meta property="article:tag" content="telnet">
+<meta property="article:tag" content="tr069">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tl8517.com/assets/g7615v2_reset_telnet/2025-05-0623035.webp">
+
+
+<link rel="canonical" href="https://tl8517.com/g7615v2_reset_telnet/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://tl8517.com/g7615v2_reset_telnet/","path":"g7615v2_reset_telnet/","title":"光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用 | Focus</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MRCBCJ8ZQ"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-0MRCBCJ8ZQ","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+<script data-ad-client="ca-pub-7562598542957769" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Focus</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">聚焦</p>
+      <img class="custom-logo-image" src="/Img/site/Site-Avatar.webp" alt="Focus">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">33</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E6%81%A2%E5%A4%8D%E5%87%BA%E5%8E%82%E8%AE%BE%E7%BD%AE%EF%BC%88reset-%E9%94%AE%EF%BC%89"><span class="nav-text">完全恢复出厂设置（reset 键）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF-telnet-%E5%8F%8A%E5%9B%BA%E5%8C%96"><span class="nav-text">开启 telnet 及固化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%88%E4%B8%8D%E6%88%90%E5%8A%9F%EF%BC%89"><span class="nav-text">使用命令（不成功）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E5%90%AF-telnet%EF%BC%88%E4%B8%8D%E6%88%90%E5%8A%9F%EF%BC%89"><span class="nav-text">开启 telnet（不成功）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BA%E5%8C%96%EF%BC%8C%E6%9B%B4%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D%E5%AF%86%E7%A0%81%EF%BC%88%E6%9C%AA%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-text">固化，更改用户名密码（未使用）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7%EF%BC%88%E4%B8%8D%E6%88%90%E5%8A%9F%EF%BC%89"><span class="nav-text">使用工具（不成功）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-ttl%EF%BC%88%E6%88%90%E5%8A%9F%EF%BC%89"><span class="nav-text">使用 ttl（成功）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%9B%B8%E5%BA%94%E5%88%86%E5%8C%BA"><span class="nav-text">删除相应分区</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-uboot"><span class="nav-text">进入 uboot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E5%8C%BA%E5%9C%B0%E5%9D%80"><span class="nav-text">查看分区地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%93%A6%E9%99%A4%E5%88%86%E5%8C%BA"><span class="nav-text">擦除分区</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A4%E6%96%B9%E6%B3%95%E5%BC%80%E5%90%AF-telnet-%E5%90%8E%E5%85%89%E7%8C%AB%E7%9A%84%E4%B8%8D%E5%90%8C"><span class="nav-text">此方法开启 telnet 后光猫的不同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#telnet-%E7%99%BB%E5%BD%95"><span class="nav-text">telnet 登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EU%E7%9B%98%E6%81%A2%E5%A4%8D%E5%A4%87%E4%BB%BD"><span class="nav-text">关于U盘恢复备份</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%B1%E4%B8%9C%E8%81%94%E9%80%9A%E8%AE%BE%E5%A4%87%E6%B3%A8%E5%86%8C"><span class="nav-text">山东联通设备注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E6%8F%90%E6%9D%83"><span class="nav-text">普通用户提权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D%EF%BC%8C%E5%AF%86%E7%A0%81"><span class="nav-text">修改用户名，密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4-TR069-%E6%88%96%E7%A6%81%E7%94%A8"><span class="nav-text">删除 TR069 或禁用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%81%E7%94%A8%E4%B8%8E%E6%81%A2%E5%A4%8D"><span class="nav-text">禁用与恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%9B%BA%E4%BB%B6"><span class="nav-text">备份固件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-mtd-%E5%88%86%E5%8C%BA"><span class="nav-text">查看 mtd 分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9A%84-u%E7%9B%98"><span class="nav-text">挂载的 u盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%A4%87%E4%BB%BD"><span class="nav-text">开始备份</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7"><span class="nav-text">升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%8C%AB%E5%81%9A%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="nav-text">光猫做交换机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%85%89%E7%8C%AB"><span class="nav-text">配置光猫</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89%E7%8C%AB%E4%B8%8A%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="nav-text">光猫上行方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89%E7%8C%AB%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="nav-text">光猫桥接模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89%E7%8C%AB-lan"><span class="nav-text">光猫 lan</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BB%8E%E8%B7%AF%E7%94%B1"><span class="nav-text">配置从路由</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E8%B7%AF%E7%94%B1%E4%B8%8A%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="nav-text">从路由上行方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E8%B7%AF%E7%94%B1%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="nav-text">从路由桥接模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%8E%E8%B7%AF%E7%94%B1-lan"><span class="nav-text">从路由 lan</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E6%88%96%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5"><span class="nav-text">视频或文章链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%EF%BC%8C%E7%BD%91%E7%BB%9C%E6%90%9C%E7%B4%A2%E7%9A%84%E6%89%80%E6%9C%89%E5%BC%80-telnet-%E5%B7%A5%E5%85%B7"><span class="nav-text">备份文件，网络搜索的所有开 telnet 工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q%E7%BE%A4%EF%BC%9A290979342%EF%BC%88%E8%81%9A%E7%84%A6%E5%8D%95%E8%BD%A6%E4%BA%A4%E6%B5%81%E7%BE%A4%EF%BC%89"><span class="nav-text">Q群：290979342（聚焦单车交流群）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q%E7%BE%A4%EF%BC%9A977922094%EF%BC%88%E8%81%9A%E7%84%A6openwrt%E8%B7%AF%E7%94%B1%E5%99%A8%E4%BA%A4%E6%B5%81%EF%BC%89"><span class="nav-text">Q群：977922094（聚焦openwrt路由器交流）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="csjtl"
+      src="/Img/user/Sidebar-Avatar.gif">
+  <p class="site-author-name" itemprop="name">csjtl</p>
+  <div class="site-description" itemprop="description">她无处不在</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">105</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">245</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/csjtl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;csjtl" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tl8517@gmail.com" title="E-Mail → mailto:tl8517@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/19763939" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;19763939" rel="noopener me" target="_blank"><i class="fa-brands fa-bilibili fa-fw"></i>BiliBili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://makerworld.com/zh/@csjtl" title="MakerWorld → https:&#x2F;&#x2F;makerworld.com&#x2F;zh&#x2F;@csjtl" rel="noopener me" target="_blank"><i class="fa-solid fa-cube fa-fw"></i>MakerWorld</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/lib/@creativecommons/vocabulary/assets/license_badges/big/by_nc_nd.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://tl8517.com/" title="https:&#x2F;&#x2F;tl8517.com">Title</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tl8517.com/g7615v2_reset_telnet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Img/user/Sidebar-Avatar.gif">
+      <meta itemprop="name" content="csjtl">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus">
+      <meta itemprop="description" content="她无处不在">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用 | Focus">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-05-03 15:26:17" itemprop="dateCreated datePublished" datetime="2025-05-03T15:26:17+08:00">2025-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-05-08 20:05:31" itemprop="dateModified" datetime="2025-05-08T20:05:31+08:00">2025-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-devices/" itemprop="url" rel="index"><span itemprop="name">embedded devices</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/embedded-devices/g7615v2/" itemprop="url" rel="index"><span itemprop="name">g7615v2</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img src="/../assets/g7615v2_reset_telnet/2025-05-0623035.webp" alt="2025-05-06 230356"></p>
+<p>适用于济南联通<br>新装光猫 G7615V2<br>生产日期：2024&#x2F;10<br>固件：V3.0.5P24T7</p>
+<h2 id="完全恢复出厂设置（reset-键）"><a href="#完全恢复出厂设置（reset-键）" class="headerlink" title="完全恢复出厂设置（reset 键）"></a>完全恢复出厂设置（reset 键）</h2><p>断掉上行光，插电开机，等到除电源外的任意灯亮（默认红灯亮，也就是光信号灯。如果上行方式改为网口1-4其中一个，就是网口的指示灯）时按下 reset 键直到 led 灯全亮并熄灭，复位完成。</p>
+<span id="more"></span>
+
+<p>完全恢复后，管理员默认<br>用户名：<code>CUAdmin</code><br>密码：<code>CUAdmin</code></p>
+<h2 id="开启-telnet-及固化"><a href="#开启-telnet-及固化" class="headerlink" title="开启 telnet 及固化"></a>开启 telnet 及固化</h2><h3 id="使用命令（不成功）"><a href="#使用命令（不成功）" class="headerlink" title="使用命令（不成功）"></a>使用命令（不成功）</h3><h4 id="开启-telnet（不成功）"><a href="#开启-telnet（不成功）" class="headerlink" title="开启 telnet（不成功）"></a>开启 telnet（不成功）</h4><p>下载<code>zteOnu.exe</code><br>在终端中执行</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">zteOnu -i <span class="number">192</span>.<span class="number">168</span>.<span class="number">1</span>.<span class="number">1</span> -u CUAdmin -pw CUAdmin -p <span class="number">80</span></span><br><span class="line"></span><br><span class="line">输入以上两行代码以后会返回如下结果：</span><br><span class="line"><span class="function">D:\&gt;<span class="title">zteOnu</span> -<span class="title">u</span> <span class="title">CUAdmin</span> -<span class="title">p</span> <span class="title">CUAdmin</span> --<span class="title">port</span> 80 --<span class="title">new</span></span></span><br><span class="line"><span class="function"><span class="title">ZteONU</span> 0.0.7, <span class="title">built</span> <span class="title">at</span> 2024-10-13<span class="title">T08</span>:29:47<span class="title">Z</span></span></span><br><span class="line"><span class="function"><span class="title">source</span>: <span class="title">https</span>://<span class="title">github.com</span>/<span class="title">thank243</span>/<span class="title">zteOnu</span></span></span><br><span class="line"><span class="function">-----------------------------------</span></span><br><span class="line"><span class="function"><span class="title">step</span> [0] <span class="title">reset</span> <span class="title">factory</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [1] <span class="title">request</span> <span class="title">factory</span> <span class="title">mode</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [2] <span class="title">send</span> <span class="title">sq</span>: <span class="title">unknown</span> <span class="title">error</span> <span class="title">Attempt</span> <span class="title">retrying</span>..(1/10)</span></span><br><span class="line"><span class="function">-----------------------------------</span></span><br><span class="line"><span class="function">...</span></span><br><span class="line"><span class="function">...</span></span><br><span class="line"><span class="function">...</span></span><br><span class="line"><span class="function">-----------------------------------</span></span><br><span class="line"><span class="function"><span class="title">step</span> [0] <span class="title">reset</span> <span class="title">factory</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [1] <span class="title">request</span> <span class="title">factory</span> <span class="title">mode</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [2] <span class="title">send</span> <span class="title">sq</span>: <span class="title">unknown</span> <span class="title">error</span> <span class="title">Attempt</span> <span class="title">retrying</span>..(10/10)</span></span><br><span class="line"><span class="function">-----------------------------------</span></span><br><span class="line"><span class="function"><span class="title">step</span> [0] <span class="title">reset</span> <span class="title">factory</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [1] <span class="title">request</span> <span class="title">factory</span> <span class="title">mode</span>: <span class="title">ok</span></span></span><br><span class="line"><span class="function"><span class="title">step</span> [2] <span class="title">send</span> <span class="title">sq</span>: <span class="title">unknown</span> <span class="title">error</span></span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/../assets/g7615v2_reset_telnet/cmd.webp" alt="cmd截图"></p>
+<h4 id="固化，更改用户名密码（未使用）"><a href="#固化，更改用户名密码（未使用）" class="headerlink" title="固化，更改用户名密码（未使用）"></a>固化，更改用户名密码（未使用）</h4><p>开 telnet 不成功，命令来自论坛，未能测试使用<br>修改telnet的账户（root）密码（Zte521）命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sendcmd 1 DB p TelnetCfg</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_Enable 1</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 TS_UName root</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 TSLan_UName root</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 TS_UPwd Zte521</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 TSLan_UPwd Zte521</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Max_Con_Num 99</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 ExitTime 999999</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 InitSecLvl 3</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 CloseServerTime 9999999</span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 Lan_EnableAfterOlt 1</span><br><span class="line">sendcmd 1 DB save</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用工具（不成功）"><a href="#使用工具（不成功）" class="headerlink" title="使用工具（不成功）"></a>使用工具（不成功）</h3><p>教程很多，傻瓜式操作，不能成功开启。</p>
+<h3 id="使用-ttl（成功）"><a href="#使用-ttl（成功）" class="headerlink" title="使用 ttl（成功）"></a>使用 ttl（成功）</h3><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p><strong>拆机测试</strong><br><img src="/../assets/g7615v2_reset_telnet/2025-05-02-16-48-53-550.webp" alt="拆后盖"></p>
+<p><strong>ttl 针脚</strong><br><img src="/../assets/g7615v2_reset_telnet/2025-05-02-16-49-02-515.webp" alt="ttl 针脚"></p>
+<p><strong>设备管理中的串口号</strong><br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-002105.webp" alt="设备管理"></p>
+<p><strong>终端配置</strong><br>我使用的工具为SecureCRT<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-002329.webp" alt="终端配置"></p>
+<h4 id="删除相应分区"><a href="#删除相应分区" class="headerlink" title="删除相应分区"></a>删除相应分区</h4><h5 id="进入-uboot"><a href="#进入-uboot" class="headerlink" title="进入 uboot"></a>进入 uboot</h5><p>插电开机，按回车键中断启动<br>开机全部的跑码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">SPI NAND</span><br><span class="line">start read bootloader</span><br><span class="line">secure boot</span><br><span class="line">CBC decrypt OK!</span><br><span class="line">CBC decrypt OK!</span><br><span class="line">CBC decrypt OK!</span><br><span class="line">verify OK!</span><br><span class="line">Jump</span><br><span class="line"></span><br><span class="line">enter bootloader...</span><br><span class="line">pll init, cpu freq=1000 MHz</span><br><span class="line"></span><br><span class="line">crpm init ok</span><br><span class="line">product_vid=77</span><br><span class="line">DDR3 size, 0x20000000=512MiB,HALF_MODE=0</span><br><span class="line">DDR3 1333 Mbps</span><br><span class="line"></span><br><span class="line">ddr init ok</span><br><span class="line">SPI NAND</span><br><span class="line">ncfg:1</span><br><span class="line">0,40,b,800</span><br><span class="line">secure uboot</span><br><span class="line">verify OK!</span><br><span class="line">backup header!!</span><br><span class="line">Jump</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">U-Boot 2021.01 (Aug 27 2024 - 15:04:38 +0800)</span><br><span class="line"></span><br><span class="line">CPU  : ZX279133@A53x2,1000MHZ</span><br><span class="line">Model: ZTE 133</span><br><span class="line">DRAM:  512 MiB</span><br><span class="line">Relocation Offset is: 1d696000</span><br><span class="line">clk_register: failed to get sd_wclk_mux device (parent of sd_wclk_div), idx = 0</span><br><span class="line">clk_register: failed to get nand_xclk device (parent of nand_wclk), idx = 1</span><br><span class="line">clk_register: failed to get clk1376m_div device (parent of pon_core_clk_mux), idx = 2</span><br><span class="line">clk_register: failed to get clk40m device (parent of pcie_25m_mux), idx = 3</span><br><span class="line">clk_register: failed to get pon_tm_aclk device (parent of tzc400_pon_aclk), idx = 4</span><br><span class="line">product_vid = 77</span><br><span class="line">vid=77-G7615V2</span><br><span class="line">mtk reset,66</span><br><span class="line">boot_ctrl value=====3</span><br><span class="line">bootsel=3</span><br><span class="line">Disable watchdog.</span><br><span class="line">el=3</span><br><span class="line">NAND:  zs-&gt;cs_regmap 0000000000000000</span><br><span class="line">zx_sfc_probe: enter</span><br><span class="line">zx_sfc_probe: done</span><br><span class="line">spi_nand spi-flash@0: READ ID data: 01-25-01, skyhigh SPI NAND was found.</span><br><span class="line">spi_nand spi-flash@0: 256 MiB, block size: 128 KiB, page size: 2048, OOB size: 128</span><br><span class="line">spinand name:spi-nand0</span><br><span class="line">Creating 14 MTD partitions on &quot;spi-nand0&quot;:</span><br><span class="line">0 MiB</span><br><span class="line">Loading Environment from NAND... OK</span><br><span class="line">In:    serial</span><br><span class="line">Out:   serial</span><br><span class="line">Err:   serial</span><br><span class="line">clk_pll env is not setted, core clk won&#x27;t change</span><br><span class="line">Net:   rx data disable</span><br><span class="line">innerGeLedPolarSet 1</span><br><span class="line">innerGeLedPolarSet 1</span><br><span class="line">innerGeLedPolarSet 1</span><br><span class="line">innerGeLedPolarSet 1</span><br><span class="line">mdio_miiphy_initialize ok</span><br><span class="line">eth0</span><br><span class="line">sec mode!</span><br><span class="line"></span><br><span class="line">Hit 1 to upgrade software version</span><br><span class="line">Hit any key to stop autoboot:  0</span><br><span class="line">=&gt;</span><br><span class="line">=&gt;</span><br><span class="line">=&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看分区地址"><a href="#查看分区地址" class="headerlink" title="查看分区地址"></a>查看分区地址</h5><p><strong>使用<code>mtd list</code>查看分区地址</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">=&gt;</span><br><span class="line">=&gt; mtd list</span><br><span class="line">List of MTD devices:</span><br><span class="line">* spi-nand0</span><br><span class="line">  - device: spi-flash@0</span><br><span class="line">  - parent: spifc@0x10d0f000</span><br><span class="line">  - driver: spi_nand</span><br><span class="line">  - type: NAND flash</span><br><span class="line">  - block size: 0x20000 bytes</span><br><span class="line">  - min I/O: 0x800 bytes</span><br><span class="line">  - OOB size: 128 bytes</span><br><span class="line">  - OOB available: 248 bytes</span><br><span class="line">  - 0x000000000000-0x000010000000 : &quot;spi-nand0&quot;</span><br><span class="line">          - 0x000000000000-0x000010000000 : &quot;whole flash&quot;</span><br><span class="line">          - 0x000000000000-0x000000300000 : &quot;u-boot&quot;</span><br><span class="line">          - 0x000000300000-0x000000500000 : &quot;others&quot;</span><br><span class="line">          - 0x000000500000-0x000000700000 : &quot;parameter tags&quot;</span><br><span class="line">          - 0x000000700000-0x000000900000 : &quot;wlan&quot;</span><br><span class="line">          - 0x000000900000-0x000001100000 : &quot;usercfg&quot;</span><br><span class="line">          - 0x000001100000-0x000001700000 : &quot;preplugin&quot;</span><br><span class="line">          - 0x000001700000-0x000004700000 : &quot;kernel1&quot;</span><br><span class="line">          - 0x000004700000-0x000007700000 : &quot;kernel2&quot;</span><br><span class="line">          - 0x000007700000-0x000008700000 : &quot;framework&quot;</span><br><span class="line">          - 0x000008700000-0x000009700000 : &quot;framework1&quot;</span><br><span class="line">          - 0x000009700000-0x00000ff00000 : &quot;plugin_data&quot;</span><br><span class="line">          - 0x000001700000-0x000004700000 : &quot;rootfs1&quot;</span><br><span class="line">          - 0x000004700000-0x000007700000 : &quot;rootfs2&quot;</span><br><span class="line">=&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="擦除分区"><a href="#擦除分区" class="headerlink" title="擦除分区"></a>擦除分区</h5><p>根据<code>mtd list</code>可以看到<code>usercfg</code>分区的起始地址为<code>0x000000900000-0x000001100000</code></p>
+<p><strong>命令<code>nand erase 0x000000900000 0x000001100000</code>擦除，重启</strong><br>地址间去掉<code>-</code>，换成空格。<br><strong>uboot 中的地址和 telnet 中的地址不同，或许可以尝试下 telnet 中的地址试试看看有什么不同</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">=&gt;</span><br><span class="line">=&gt; nand erase 0x000000900000 0x000001100000</span><br><span class="line"></span><br><span class="line">NAND erase: device 0 offset 0x900000, size 0x1100000</span><br><span class="line">Erasing at 0x19e0000 -- 100% complete.</span><br><span class="line">OK</span><br><span class="line">=&gt; reset</span><br><span class="line">resetting ...</span><br></pre></td></tr></table></figure>
+
+<h4 id="此方法开启-telnet-后光猫的不同"><a href="#此方法开启-telnet-后光猫的不同" class="headerlink" title="此方法开启 telnet 后光猫的不同"></a>此方法开启 telnet 后光猫的不同</h4><ul>
+<li><p>运营商原机版本号<code>V3.0.5P24T7</code><br>清空<code>usercfg</code>后版本号<code>V3.0.5P1N30</code><br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-005025.webp" alt="原机版本号"><br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003901.webp" alt="版本号变化"></p>
+<p>使用<code>upgradetest getver</code>显示只有主版本号，备用为空。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/ # upgradetest getver</span><br><span class="line">Main  version num: V3.0.5P1N30</span><br><span class="line">Spare version num:NULL</span><br><span class="line">success!</span><br><span class="line">/ #</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>清空后 telnet 成为永久开启状态，执行捅屁屁完全恢复出厂后，telnet 还是为开启状态</strong></p>
+</li>
+<li><p>启动后不会自动跳转到设备注册页面</p>
+</li>
+</ul>
+<h4 id="telnet-登录"><a href="#telnet-登录" class="headerlink" title="telnet 登录"></a>telnet 登录</h4><p>telnet配置<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-010037.webp" alt="telnet配置"></p>
+<p>用户名：root<br>密码：Zte521<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-010228.webp" alt="登录"></p>
+<h4 id="关于U盘恢复备份"><a href="#关于U盘恢复备份" class="headerlink" title="关于U盘恢复备份"></a>关于U盘恢复备份</h4><p>没有成功过，不知道哪里不对</p>
+<h2 id="山东联通设备注册"><a href="#山东联通设备注册" class="headerlink" title="山东联通设备注册"></a>山东联通设备注册</h2><p>浏览器进入<code>http://192.168.1.1/register.gch</code>，只需填入 loid 开始注册，会自动下发配置，等待完成即可。</p>
+<p>注册下发完成，密码会更改，需要使用 telnet 修改，开始下一步。</p>
+<h2 id="普通用户提权"><a href="#普通用户提权" class="headerlink" title="普通用户提权"></a>普通用户提权</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sendcmd 1 DB set TelnetCfg 0 InitSecLvl 3</span><br><span class="line"></span><br><span class="line">sendcmd 1 DB set DevAuthInfo 1 Level 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改用户名，密码"><a href="#修改用户名，密码" class="headerlink" title="修改用户名，密码"></a>修改用户名，密码</h2><p>管理员：<code>DevAuthInfo 0</code><br>普通用户：<code>DevAuthInfo 1</code><br>用户名：<code>xxxxxxxx</code><br>密码：<code>yyyyyyyy</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sendcmd 1 DB set DevAuthInfo 0 User xxxxxxxx</span><br><span class="line">sendcmd 1 DB set DevAuthInfo 0 Pass yyyyyyyy</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除-TR069-或禁用"><a href="#删除-TR069-或禁用" class="headerlink" title="删除 TR069 或禁用"></a>删除 TR069 或禁用</h2><p>执行命令<code>sendcmd 1 DB p WANC</code><br>查看<code>&lt;Row No=&quot;X&quot;&gt;</code>，和网页端对比找到对应的要删除项的数字。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/ # sendcmd 1 DB p WANC</span><br><span class="line">&lt;Tbl name=&quot;WANC&quot; RowCount=&quot;2&quot;&gt;</span><br><span class="line">        &lt;Row No=&quot;0&quot;&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">                &lt;DM name=&quot;WANCName&quot; val=&quot;1_TR069_R_VID_46&quot;/&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">                &lt;DM name=&quot;WorkIFMac&quot; val=&quot;00:00:00:00:d8:c9&quot;/&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">        &lt;/Row&gt;</span><br><span class="line">        &lt;Row No=&quot;1&quot;&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">                &lt;DM name=&quot;WANCName&quot; val=&quot;2_INTERNET_B_VID_0&quot;/&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">                &lt;DM name=&quot;WorkIFMac&quot; val=&quot;00:00:00:00:00:00&quot;/&gt;</span><br><span class="line">                ...</span><br><span class="line">                ...</span><br><span class="line">        &lt;/Row&gt;</span><br><span class="line">&lt;/Tbl&gt;</span><br><span class="line">/ #</span><br></pre></td></tr></table></figure>
+
+<p>在打印出的信息中查看 TR069 属于 X 。通常 X&#x3D;0</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sendcmd 1 DB delr WANC 0</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="禁用与恢复"><a href="#禁用与恢复" class="headerlink" title="禁用与恢复"></a>禁用与恢复</h3><p>禁用命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sendcmd 1 DB set WANC 0 Enable 0</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB reboot</span><br></pre></td></tr></table></figure>
+
+<p>恢复命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sendcmd 1 DB set WANC 0 Enable 1</span><br><span class="line">sendcmd 1 DB save</span><br><span class="line">sendcmd 1 DB reboot</span><br></pre></td></tr></table></figure>
+
+<p>删除或禁用以后，执行<code>sendcmd 1 DB reboot</code>，网页可能不会更改，就需要重启路由器</p>
+<h2 id="备份固件"><a href="#备份固件" class="headerlink" title="备份固件"></a>备份固件</h2><h3 id="查看-mtd-分区"><a href="#查看-mtd-分区" class="headerlink" title="查看 mtd 分区"></a>查看 mtd 分区</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/ # cat /proc/mtd</span><br><span class="line">dev:    size   erasesize  name</span><br><span class="line">mtd0: 10000000 00020000 &quot;whole flash&quot;</span><br><span class="line">mtd1: 00300000 00020000 &quot;u-boot&quot;</span><br><span class="line">mtd2: 00200000 00020000 &quot;others&quot;</span><br><span class="line">mtd3: 00200000 00020000 &quot;parameter tags&quot;</span><br><span class="line">mtd4: 00200000 00020000 &quot;wlan&quot;</span><br><span class="line">mtd5: 00800000 00020000 &quot;usercfg&quot;</span><br><span class="line">mtd6: 00600000 00020000 &quot;preplugin&quot;</span><br><span class="line">mtd7: 03000000 00020000 &quot;kernel1&quot;</span><br><span class="line">mtd8: 03000000 00020000 &quot;kernel2&quot;</span><br><span class="line">mtd9: 01000000 00020000 &quot;framework&quot;</span><br><span class="line">mtd10: 01000000 00020000 &quot;framework1&quot;</span><br><span class="line">mtd11: 06800000 00020000 &quot;plugin_data&quot;</span><br><span class="line">mtd12: 03000000 00020000 &quot;rootfs1&quot;</span><br><span class="line">mtd13: 02aa0000 00020000 &quot;rootfs2&quot;</span><br><span class="line">/ #</span><br></pre></td></tr></table></figure>
+
+<h3 id="挂载的-u盘"><a href="#挂载的-u盘" class="headerlink" title="挂载的 u盘"></a>挂载的 u盘</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/ # ls /mnt</span><br><span class="line">USB2_disc1  USB2_disc2</span><br></pre></td></tr></table></figure>
+
+<h3 id="开始备份"><a href="#开始备份" class="headerlink" title="开始备份"></a>开始备份</h3><p>没有<code>dd</code>命令，使用<code>cat</code>命令。bin 文件我只导出，没有测试，谨慎使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat /dev/mtd0 &gt; /mnt/USB2_disc2/mtd0_whole_flash.bin</span><br><span class="line">cat /dev/mtd1 &gt; /mnt/USB2_disc2/mtd1_u-boot.bin</span><br><span class="line">cat /dev/mtd2 &gt; /mnt/USB2_disc2/mtd2_others.bin</span><br><span class="line">cat /dev/mtd3 &gt; /mnt/USB2_disc2/mtd3_parameter_tags.bin</span><br><span class="line">cat /dev/mtd4 &gt; /mnt/USB2_disc2/mtd4_wlan.bin</span><br><span class="line">cat /dev/mtd5 &gt; /mnt/USB2_disc2/mtd5_usercfg.bin</span><br><span class="line">cat /dev/mtd6 &gt; /mnt/USB2_disc2/mtd6_preplugin.bin</span><br><span class="line">cat /dev/mtd7 &gt; /mnt/USB2_disc2/mtd7_kernel1.bin</span><br><span class="line">cat /dev/mtd8 &gt; /mnt/USB2_disc2/mtd8_kernel2.bin</span><br><span class="line">cat /dev/mtd9 &gt; /mnt/USB2_disc2/mtd9_framework.bin</span><br><span class="line">cat /dev/mtd10 &gt; /mnt/USB2_disc2/mtd10_framework1.bin</span><br><span class="line">cat /dev/mtd11 &gt; /mnt/USB2_disc2/mtd11_plugin_data.bin</span><br><span class="line">cat /dev/mtd12 &gt; /mnt/USB2_disc2/mtd12_rootfs1.bin</span><br><span class="line">cat /dev/mtd13 &gt; /mnt/USB2_disc2/mtd13_rootfs2.bin</span><br></pre></td></tr></table></figure>
+
+<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>固件上传地址（没有打包未使用）<br><code>http://192.168.1.1/cu.html?hidden=upgrade</code></p>
+<h2 id="光猫做交换机"><a href="#光猫做交换机" class="headerlink" title="光猫做交换机"></a>光猫做交换机</h2><h3 id="配置光猫"><a href="#配置光猫" class="headerlink" title="配置光猫"></a>配置光猫</h3><p>因为我的 7615 上行光纤被我捣鼓断了，收不到光。因此用它来做带 WiFi 的交换机使用。需要将上行方式 pon 改为 lan 口。</p>
+<h4 id="光猫上行方式"><a href="#光猫上行方式" class="headerlink" title="光猫上行方式"></a>光猫上行方式</h4><p>更改上行方式为 lan1</p>
+<p>这可以关闭光猫的光纤指示灯，为了因为检测不到光信号而一直闪烁。<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003059.webp" alt="上行 lan1"></p>
+<h4 id="光猫桥接模式"><a href="#光猫桥接模式" class="headerlink" title="光猫桥接模式"></a>光猫桥接模式</h4><p>新建 wan 为桥接模式<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003145.webp" alt="光猫桥接模式"><br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003236.webp" alt="光猫关联lan口"></p>
+<h4 id="光猫-lan"><a href="#光猫-lan" class="headerlink" title="光猫 lan"></a>光猫 lan</h4><p>lan 取消DHCP<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003340.webp" alt="光猫 lan 取消DHCP"></p>
+<h3 id="配置从路由"><a href="#配置从路由" class="headerlink" title="配置从路由"></a>配置从路由</h3><p>从路由管理员的密码竟然和我修改后的光猫密码一样，不知道是不是一起同步过来的。</p>
+<p>从路由版本<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-004611.webp" alt="从路由版本"></p>
+<h4 id="从路由上行方式"><a href="#从路由上行方式" class="headerlink" title="从路由上行方式"></a>从路由上行方式</h4><p>一开始从路由没有网，登录从路由一看，上行方式变为 lan1，需要改为自适应。</p>
+<p>更改上行方式为 lan1<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003704.webp" alt="从路由上行 lan1"></p>
+<h4 id="从路由桥接模式"><a href="#从路由桥接模式" class="headerlink" title="从路由桥接模式"></a>从路由桥接模式</h4><p>新建 wan 为桥接模式<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003535.webp" alt="从路由桥接模式"><br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003609.webp" alt="从路由关联lan口"></p>
+<h4 id="从路由-lan"><a href="#从路由-lan" class="headerlink" title="从路由 lan"></a>从路由 lan</h4><p>lan 取消DHCP<br><img src="/../assets/g7615v2_reset_telnet/2025-05-05-003639.webp" alt="从路由 lan 取消DHCP">-</p>
+<h2 id="视频或文章链接"><a href="#视频或文章链接" class="headerlink" title="视频或文章链接"></a>视频或文章链接</h2><p><a href="https://tl8517.com/openwrt-rax3000m/">RAX3000M 修改配置文件，刷 u-boot 及 openwrt 固件</a></p>
+<h2 id="备份文件，网络搜索的所有开-telnet-工具"><a href="#备份文件，网络搜索的所有开-telnet-工具" class="headerlink" title="备份文件，网络搜索的所有开 telnet 工具"></a>备份文件，网络搜索的所有开 telnet 工具</h2><p>g7615相关文档<br>文档已更新。阿里云盘不能分享压缩文件，所以我压缩成可以自解压的 exe 文件，双击文件自动解压。<br><a target="_blank" rel="noopener" href="https://www.alipan.com/s/b11cD242uvz">https://www.alipan.com/s/b11cD242uvz</a><br>提取码: 71wo</p>
+<h2 id="Q群：290979342（聚焦单车交流群）"><a href="#Q群：290979342（聚焦单车交流群）" class="headerlink" title="Q群：290979342（聚焦单车交流群）"></a>Q群：290979342（聚焦单车交流群）</h2><h2 id="Q群：977922094（聚焦openwrt路由器交流）"><a href="#Q群：977922094（聚焦openwrt路由器交流）" class="headerlink" title="Q群：977922094（聚焦openwrt路由器交流）"></a>Q群：977922094（聚焦openwrt路由器交流）</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/Img/pay/wechatpay.webp" alt="csjtl 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/Img/pay/alipay.webp" alt="csjtl 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>聚焦单车
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://tl8517.com/g7615v2_reset_telnet/" title="光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用">https://tl8517.com/g7615v2_reset_telnet/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8D%A3%E9%BC%93%E5%8D%95%E8%BD%A6/" rel="tag"># 捣鼓单车</a>
+              <a href="/tags/%E8%81%9A%E7%84%A6%E5%8D%95%E8%BD%A6%E5%B7%A5%E4%BD%9C%E5%AE%A4/" rel="tag"># 聚焦单车工作室</a>
+              <a href="/tags/G7615V2/" rel="tag"># G7615V2</a>
+              <a href="/tags/u-boot/" rel="tag"># u-boot</a>
+              <a href="/tags/telnet/" rel="tag"># telnet</a>
+              <a href="/tags/tr069/" rel="tag"># tr069</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/rival-shifter-fault/" rel="prev" title="rival 右侧手变刹车活塞不回位[单车故障案例]">
+                  <i class="fa fa-angle-left"></i> rival 右侧手变刹车活塞不回位[单车故障案例]
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/focus-bicycle-studio/" rel="next" title="聚焦单车工作室">
+                  聚焦单车工作室 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fas fa-heart-broken"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">csjtl</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="/lib/animejs/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="/lib/hexo-generator-searchdb/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+</body>
+</html>
