@@ -43,6 +43,49 @@
     
     
     <entry>
+      <title>sk-d741-telnet-ftp</title>
+      <link href="/sk-d741-telnet-ftp/"/>
+      <url>/sk-d741-telnet-ftp/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/%E5%9B%BE%E7%89%87%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84" alt="图片描述"><br>内容简述</p><span id="more"></span><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h2 id="恢复出厂设置"><a href="#恢复出厂设置" class="headerlink" title="恢复出厂设置"></a>恢复出厂设置</h2><p>开机长按 reset</p><h2 id="登录网页界面"><a href="#登录网页界面" class="headerlink" title="登录网页界面"></a>登录网页界面</h2><p><code>http://192.168.1.1/cu.html</code></p><p>高级设置-ftp设置-开启ftp服务器</p><p>用户名：useradmin<br>密码：useradmin</p><h2 id="勾选Telnet-Enable"><a href="#勾选Telnet-Enable" class="headerlink" title="勾选Telnet Enable"></a>勾选Telnet Enable</h2><p><code>http://192.168.1.1/hidden_version_switch.html</code></p><h2 id="telnet-连接"><a href="#telnet-连接" class="headerlink" title="telnet 连接"></a>telnet 连接</h2><p>终端<code>telnet 192.168.1.1</code></p><p>SecureCRT 连接</p><p>用户名：user<br>密码：CUAdmin</p><h2 id="修改-telnet-配置文件"><a href="#修改-telnet-配置文件" class="headerlink" title="修改 telnet 配置文件"></a>修改 telnet 配置文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">sidbg 1 DB set TelnetCfg 0 TS_Enable 1     #打开telnet enable</span><br><span class="line">sidbg 1 DB set TelnetCfg 0 Lan_Enable 1    #打开LAN 口telnet</span><br><span class="line">sidbg 1 DB save                            #保存</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><p>不能始终为开启状态，必须通过网页 Telnet Enable<br><code>su</code>为 user 切为管理员</p><h2 id="视频或文章链接"><a href="#视频或文章链接" class="headerlink" title="视频或文章链接"></a>视频或文章链接</h2><p><a href="https://tl8517.com/">视频或文章标题</a></p><h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p><a href="https://tl8517.com/">文件名称</a></p><h2 id="Q群：290979342（聚焦单车交流群）"><a href="#Q群：290979342（聚焦单车交流群）" class="headerlink" title="Q群：290979342（聚焦单车交流群）"></a>Q群：290979342（聚焦单车交流群）</h2><h2 id="Q群：977922094（聚焦-openwrt-路由器交流）"><a href="#Q群：977922094（聚焦-openwrt-路由器交流）" class="headerlink" title="Q群：977922094（聚焦 openwrt 路由器交流）"></a>Q群：977922094（聚焦 openwrt 路由器交流）</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> bicycle </category>
+          
+          <category> 捣鼓单车 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 捣鼓单车 </tag>
+            
+            <tag> 聚焦单车工作室 </tag>
+            
+            <tag> 3d建模 </tag>
+            
+            <tag> 3d打印 </tag>
+            
+            <tag> telnet </tag>
+            
+            <tag> sk.d741 </tag>
+            
+            <tag> ftp </tag>
+            
+            <tag> 创维 </tag>
+            
+            <tag> 光猫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>光猫 G7615V2 完全恢复出厂设置，打开 telnet ，删除 TR069，作为交换机使用</title>
       <link href="/g7615v2_reset_telnet/"/>
       <url>/g7615v2_reset_telnet/</url>
